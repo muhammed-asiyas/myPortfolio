@@ -1,5 +1,4 @@
 import { Component } from "react";
-import { MdClose } from "react-icons/md"
 import "./index.css";
 import NavItem from "./NavItem";
 
