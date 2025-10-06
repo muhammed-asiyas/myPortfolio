@@ -69,6 +69,10 @@
     color: #9407a4;
 }
 
+.nav-hamburger-image {
+    width: 20px;
+}
+
 
 .navbar-container-menu-sm {
     display: flex;

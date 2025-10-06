@@ -1,5 +1,4 @@
 import { Component } from "react";
-import { AiOutlineMenu } from "react-icons/ai";
 import { MdClose } from "react-icons/md"
 import "./index.css";
 import NavItem from "./NavItem";
@@ -62,7 +61,7 @@ class Header extends Component {
           className="nav-button-hamburger"
           onClick={this.onClickMenuBar}
         >
-          <AiOutlineMenu className="nav-menu-icon" />
+          <img className="nav-hamburger-image" src="https://res.cloudinary.com/dlhgbo0ji/image/upload/v1759769410/more_dmhynq.png" />
         </button>
       </nav>
     );
