@@ -47,7 +47,7 @@ class Header extends Component {
             className="nav-button-hamburger"
             onClick={this.onClickMenuBar}
           >
-            <MdClose className="nav-menu-icon" />
+            <img className="nav-hamburger-image" src="https://res.cloudinary.com/dlhgbo0ji/image/upload/v1759769783/close_d8qtko.png" />
           </button>
         </div>
         {navItemList.map((eachItem) => (
