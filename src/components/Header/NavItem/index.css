@@ -1,0 +1,15 @@
+.nav-item {
+    font-family: Bahnschrift;
+    font-size: 19px;
+    cursor: pointer;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.nav-item:hover {
+    color: blueviolet;
+}
+
+.link-item {
+    text-decoration: none;
+}

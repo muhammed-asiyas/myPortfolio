@@ -1,0 +1,249 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgb(38, 12, 98);
+}
+
+.all-my-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.my-container {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  background-image: linear-gradient(to right, rgb(120, 22, 206), rgb(190, 213, 248));
+  border-radius: 12px;
+  border: 1px solid rgb(38, 12, 98);
+  box-shadow: 0px 0px 10px 0px #0c0c0c;
+  padding: 12px;
+  margin-top: 100px;
+}
+
+.name {
+  text-align: center;
+  font-size: 70px;
+  color: rgb(10, 1, 19);
+  animation: rotate 3s ease-in-out alternate infinite;
+  position: relative;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateY(-10deg);
+    text-shadow:  1px -1px #CCC,
+                  2px -1px #BBB,
+                  3px -2px rgb(248, 242, 242),
+                  4px -2px #999,
+                  5px -3px #888,
+                  6px -3px #777;
+  }
+  to {
+    transform: rotateY(10deg);
+    text-shadow:  -1px -1px rgb(226, 220, 227),
+                  -2px -1px #BBB,
+                  -3px -2px rgb(238, 235, 235),
+                  -4px -2px #999,
+                  -5px -3px #888,
+                  -6px -3px #777;
+  }
+}
+
+
+.my-image {
+  display: flex;
+  align-self: flex-end;
+  width: 330px;
+  padding-right: 40px;
+}
+
+.my-image:hover {
+  width: 360px;
+}
+
+
+@keyframes mymove {
+  from {left: 0px;}
+  to {left: 200px;}
+}
+
+.my-summary {
+  font-size: 24px;
+  color: #0d0219;
+  font-weight: 600;
+  font-family: Comic Sans MS;
+  padding-left: 12px;
+}
+
+@media screen and (max-width: 767px) {
+  .my-image {
+    display: none;
+  }
+  .name {
+    font-size: 34px;
+    text-align: start;
+    padding-left: 12px;
+  }
+  .my-summary {
+    font-size: 16px;
+  }
+}
+
+.coding-progress-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.coding-hour {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  padding: 12px;
+}
+
+.vertical {
+  border-left: 3px solid rgb(27, 26, 28);
+  height: 200px;
+}
+
+.project-count {
+  color: #060606;
+  font-size: 30px;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.coding-hour-count {
+  color: #060606;
+  font-size: 30px;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.progress-description {
+  color: rgb(18, 1, 23);
+  font-size: 28px;
+  font-family: Comic Sans MS;
+}
+
+@media screen and (max-width: 767px) {
+  .progress-description {
+    font-size: 16px;
+  }
+  .vertical {
+    height: 170px;
+  }
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 650px;
+}
+
+.technical-skill-head {
+  color: rgb(189, 189, 215);
+  font-family: Bahnschrift;
+  font-weight: 600;
+  font-size: 36px;
+  text-shadow: 0px 0px 9px rgb(2, 1, 3);
+  margin: 0x;
+  margin-top: 80px;
+
+}
+
+.technical-skill-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  flex-wrap: wrap;
+  width: 78%;
+  border-radius: 12px;
+  padding: 0px;
+  margin: 0px;
+  margin-top: 100px;
+}
+
+@media screen and (max-width: 767px) {
+  .technical-skill-head {
+    font-size: 28px;
+  }
+  .technical-skill-container {
+    width: 90%;
+  }
+}
+
+
+.project-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+}
+
+.project-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: rgb(38, 12, 98);
+}
+
+.project-head {
+  color: rgb(189, 189, 215);
+  font-family: Bahnschrift;
+  font-weight: 600;
+  font-size: 36px;
+  text-shadow: 0px 0px 9px rgb(2, 1, 3);
+  margin: 0x;
+  margin-top: 100px;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 70vh;
+  width: 100%;
+  background-color: rgb(38, 12, 98);
+}
+
+.get-in-touch-head {
+  color: rgb(189, 189, 215);
+  font-family: Bahnschrift;
+  font-weight: 600;
+  font-size: 36px;
+  text-shadow: 0px 0px 9px rgb(2, 1, 3);
+  margin: 0x;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.contact-items-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 90%;
+  border-radius: 12px;
+  padding: 12px;
+  margin: 16px;
+  list-style-type: none;
+}
+
+@media screen and (max-width: 767px) {
+  .contact-items-container {
+    width: 80%;
+  }
+}

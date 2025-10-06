@@ -1,0 +1,58 @@
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 130px;
+    cursor: pointer;
+    border-radius: 20px;
+    background-image: radial-gradient(circle, blueviolet, rgb(18, 7, 28));
+    box-shadow: 0px 0px 6px 0px black;
+    margin: 16px;
+}
+
+.contact-item:hover {
+    box-shadow: 0px 0px 10px 2px rgb(7, 7, 7);
+}
+
+
+
+.contact-logo-item {
+    width: 30px;
+}
+
+.contact-title {
+    color: cornsilk;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 10px;
+    font-family: Segoe Print;
+}
+
+.contact-display {
+    color: cornsilk;
+    font-size: 10px;
+    font-family: Rockwell;
+    font-weight: 400;
+    margin: 0px;
+}
+
+@media screen and (max-width: 767px) {
+    .contact-item {
+        width: 130px;
+        height: 90px;
+    }
+
+    .contact-logo-item {
+        width: 24px;
+    }
+
+    .contact-title {
+        font-size: 12px;
+    }
+
+    .contact-display {
+        font-size: 7px;
+    }
+}

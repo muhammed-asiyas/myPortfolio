@@ -1,0 +1,58 @@
+.project-list-item {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  background-image: linear-gradient(
+    to right,
+    rgb(120, 22, 206),
+    rgb(190, 213, 248)
+  );
+  border-radius: 12px;
+  border: 1px solid rgb(38, 12, 98);
+  box-shadow: 0px 0px 10px 0px #0c0c0c;
+  padding: 12px;
+  margin: 16px;
+}
+
+.project-name {
+  text-align: center;
+  color: rgb(6, 7, 8);
+  font-family: Comic Sans MS;
+  font-size: 26px;
+}
+
+.project-list-item:hover {
+  box-shadow: 0px 0px 8px 1px #cd87f1;
+  width: 91%;
+  .project-name {
+    font-size: 28px;
+  }
+}
+
+.a-tag-button {
+  display: flex;
+  align-items: center;
+  width: 100px;
+}
+.visit-project-button {
+  width: 100px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  cursor: pointer;
+  border-radius: 8px;
+  background-image: linear-gradient(to right,  rgb(35, 21, 46),
+    rgb(145, 28, 228) );
+  border: 1px solid #333033;
+  box-shadow: 0px 0px 4px 0px black;
+  color: #fbfafc;
+  font-family: Segoe Print;
+  font-weight: 400;
+  font-size: 11px;
+}
+
+.visit-project-button:hover {
+  box-shadow: 0px 0px 8px 2px rgb(11, 11, 11);
+  font-size: 12px;
+  font-weight: 800;
+  border-radius: 12px;
+}
