@@ -1,21 +1,31 @@
 import { Component } from "react";
+import { AiOutlineMenu } from "react-icons/ai";
+import { MdClose } from "react-icons/md"
 import "./index.css";
 import NavItem from "./NavItem";
 
 const navItemList = [
   {
-    id: 1, item: 'Home', link: '/#home',
+    id: 1,
+    item: "Home",
+    link: "/#home",
   },
   {
-    id: 2, item: 'Skills', link: '/#skills'
+    id: 2,
+    item: "Skills",
+    link: "/#skills",
   },
   {
-    id: 3, item: 'Projects', link: '/#projects',
+    id: 3,
+    item: "Projects",
+    link: "/#projects",
   },
   {
-    id: 4, item: 'Contact', link: '/#contacts'
-  }
-]
+    id: 4,
+    item: "Contact",
+    link: "/#contacts",
+  },
+];
 
 class Header extends Component {
   state = {
@@ -28,16 +38,48 @@ class Header extends Component {
     }));
   };
 
+  renderNavBarInSmallDevice = () => {
+    const { isClickMenu } = this.state;
+    return isClickMenu ? (
+      <nav className="navbar-container-menu-sm">
+        <div className="nav-bar-button-close">
+          <button
+            type="button"
+            className="nav-button-hamburger"
+            onClick={this.onClickMenuBar}
+          >
+            <MdClose className="nav-menu-icon" />
+          </button>
+        </div>
+        {navItemList.map((eachItem) => (
+          <NavItem key={eachItem.id} navItem={eachItem} />
+        ))}
+      </nav>
+    ) : (
+      <nav className="navbar-container-sm">
+        <button
+          type="button"
+          className="nav-button-hamburger"
+          onClick={this.onClickMenuBar}
+        >
+          <AiOutlineMenu className="nav-menu-icon" />
+        </button>
+      </nav>
+    );
+  };
+
   render() {
-    const { isClickMenu} = this.state;
     return (
-      <div className="header-container">
-        <nav className="navbar-container-lg">
-          {navItemList.map(eachItem => (
-            <NavItem key={eachItem.id} navItem={eachItem} />
-          ))}
-        </nav>
-      </div>
+      <>
+        <div className="header-container">
+          <nav className="navbar-container-lg">
+            {navItemList.map((eachItem) => (
+              <NavItem key={eachItem.id} navItem={eachItem} />
+            ))}
+          </nav>
+        </div>
+        {this.renderNavBarInSmallDevice()}
+      </>
     );
   }
 }

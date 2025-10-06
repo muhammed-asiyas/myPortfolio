@@ -4,12 +4,41 @@
     cursor: pointer;
     font-weight: 700;
     color: #ffffff;
+    margin: 0px;
 }
 
 .nav-item:hover {
-    color: blueviolet;
+    color: rgb(7, 7, 7);
 }
 
 .link-item {
     text-decoration: none;
+}
+
+.nav-item-sm {
+    list-style-type: none;
+    margin: 6px;
+}
+
+.nav-item-lg {
+    list-style-type: none;
+}
+
+@media screen and (max-width: 767px) {
+    .nav-item-lg {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .nav-item-sm {
+        display: none;
+    }
+}
+
+.nav-bar-hr-line{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 1px dashed rgb(231, 130, 240);
 }
