@@ -1,8 +1,5 @@
 import { Component } from "react";
 import "./index.css";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { MdClose } from "react-icons/md";
-import { HamburgerIconButton } from "./styledComponents";
 import NavItem from "./NavItem";
 
 const navItemList = [
@@ -39,14 +36,6 @@ class Header extends Component {
           {navItemList.map(eachItem => (
             <NavItem key={eachItem.id} navItem={eachItem} />
           ))}
-        </nav>
-        <nav className="navbar-container-sm">
-          <HamburgerIconButton type="button" isClickMenu>
-            <GiHamburgerMenu
-              className="hamburger-menu"
-              onClick={this.onClickMenuBar}
-            />
-          </HamburgerIconButton>
         </nav>
       </div>
     );
