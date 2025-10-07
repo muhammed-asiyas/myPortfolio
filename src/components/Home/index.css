@@ -15,9 +15,14 @@
 
 .my-container {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   width: 90%;
-  background-image: linear-gradient(to right, rgb(120, 22, 206), rgb(190, 213, 248));
+  background-image: linear-gradient(
+    to right,
+    rgb(120, 22, 206),
+    rgb(190, 213, 248)
+  );
   border-radius: 12px;
   border: 1px solid rgb(38, 12, 98);
   box-shadow: 0px 0px 10px 0px #0c0c0c;
@@ -36,24 +41,57 @@
 @keyframes rotate {
   from {
     transform: rotateY(-10deg);
-    text-shadow:  1px -1px #CCC,
-                  2px -1px #BBB,
-                  3px -2px rgb(248, 242, 242),
-                  4px -2px #999,
-                  5px -3px #888,
-                  6px -3px #777;
+    text-shadow: 1px -1px #ccc, 2px -1px #bbb, 3px -2px rgb(248, 242, 242),
+      4px -2px #999, 5px -3px #888, 6px -3px #777;
   }
   to {
     transform: rotateY(10deg);
-    text-shadow:  -1px -1px rgb(226, 220, 227),
-                  -2px -1px #BBB,
-                  -3px -2px rgb(238, 235, 235),
-                  -4px -2px #999,
-                  -5px -3px #888,
-                  -6px -3px #777;
+    text-shadow: -1px -1px rgb(226, 220, 227), -2px -1px #bbb,
+      -3px -2px rgb(238, 235, 235), -4px -2px #999, -5px -3px #888,
+      -6px -3px #777;
   }
 }
 
+.my-image-sm {
+  position: relative;
+  width: 25rem;
+  height: 25rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-sm {
+  width: 120px;
+}
+
+.my-image-sm .circle-spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border-top: .2rem solid rgb(235, 230, 230);
+    border-bottom: .2rem solid rgb(252, 245, 245);
+    border-left: .2rem solid blueviolet;
+    border-right: .2rem solid blueviolet;
+    animation: aboutSpinner 5s linear infinite; 
+}
+
+@media screen and (min-width: 767px) {
+  .my-image-sm {
+    display: none;
+  }
+}
+
+@keyframes aboutSpinner {
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
 
 .my-image {
   display: flex;
@@ -63,13 +101,17 @@
 }
 
 .my-image:hover {
-  width: 360px;
+  transition: 0.3s;
+  opacity: 0.8;
 }
 
-
 @keyframes mymove {
-  from {left: 0px;}
-  to {left: 200px;}
+  from {
+    left: 0px;
+  }
+  to {
+    left: 200px;
+  }
 }
 
 .my-summary {
@@ -81,6 +123,9 @@
 }
 
 @media screen and (max-width: 767px) {
+  .my-container {
+    flex-direction: column;
+  }
   .my-image {
     display: none;
   }
@@ -158,7 +203,6 @@
   text-shadow: 0px 0px 9px rgb(2, 1, 3);
   margin: 0x;
   margin-top: 80px;
-
 }
 
 .technical-skill-container {
@@ -182,7 +226,6 @@
     width: 90%;
   }
 }
-
 
 .project-list-container {
   display: flex;
@@ -243,6 +286,9 @@
 }
 
 @media screen and (max-width: 767px) {
+  .contact-container {
+    height: 100vh;
+  }
   .contact-items-container {
     width: 80%;
   }

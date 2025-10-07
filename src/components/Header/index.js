@@ -46,7 +46,10 @@ class Header extends Component {
             className="nav-button-hamburger"
             onClick={this.onClickMenuBar}
           >
-            <img className="nav-hamburger-image" src="https://res.cloudinary.com/dlhgbo0ji/image/upload/v1759769783/close_d8qtko.png" />
+            <img
+              className="nav-hamburger-image"
+              src="https://res.cloudinary.com/dlhgbo0ji/image/upload/v1759769783/close_d8qtko.png"
+            />
           </button>
         </div>
         {navItemList.map((eachItem) => (
@@ -55,12 +58,18 @@ class Header extends Component {
       </nav>
     ) : (
       <nav className="navbar-container-sm">
+        <a href="#home">
+          <h1 className="nav-head-lg">Asiyas</h1>
+        </a>
         <button
           type="button"
           className="nav-button-hamburger"
           onClick={this.onClickMenuBar}
         >
-          <img className="nav-hamburger-image" src="https://res.cloudinary.com/dlhgbo0ji/image/upload/v1759769410/more_dmhynq.png" />
+          <img
+            className="nav-hamburger-image"
+            src="https://res.cloudinary.com/dlhgbo0ji/image/upload/v1759769410/more_dmhynq.png"
+          />
         </button>
       </nav>
     );
@@ -70,6 +79,10 @@ class Header extends Component {
     return (
       <>
         <div className="header-container">
+          <a href="#home">
+            <h1 className="nav-head-lg">Asiyas</h1>
+          </a>
+
           <nav className="navbar-container-lg">
             {navItemList.map((eachItem) => (
               <NavItem key={eachItem.id} navItem={eachItem} />

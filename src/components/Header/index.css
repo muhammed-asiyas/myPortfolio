@@ -1,12 +1,27 @@
 .header-container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     height: 90px;
     width: 100%;
+    padding-left: 28px;
+    padding-right: 12px;
     background-color: blueviolet;
     border: 1px solid black;
     position: fixed;
+}
+
+.nav-head-lg {
+   color: rgb(0, 2, 3);
+   font-family: Brush Script MT;
+   font-size: 44px;
+   text-shadow: 0px 5px 3px rgb(155, 222, 224);
+}
+
+@media screen and (max-width: 767px) {
+    .nav-head-lg {
+        font-size: 32px;
+    }
 }
 
 .navbar-container-lg {
@@ -14,11 +29,17 @@
     align-items: center;
     justify-content: space-around;
     height: 66%;
-    width: 700px;
+    width: 40%;
     background-color: rgb(4, 2, 5);
     border-radius: 16px;
     border: 2px solid rgb(38, 12, 98);
     box-shadow: 0px 0px 10px 2px #9407a4;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1050px) {
+    .navbar-container-lg {
+        width: 56%;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -35,13 +56,14 @@
 .navbar-container-sm {
     display: flex;
     position: fixed;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 66px;
     width: 100%;
     background-color: blueviolet;
     padding-right: 14px;
+    padding-left: 22px;
+    box-shadow: 1px 1px 10px 0px black;
 }
 
 @media screen and (min-width: 768px) {
@@ -51,9 +73,7 @@
 }
 
 .nav-button-hamburger {
-    display: flex;
-    align-self: flex-end;
-    background-color: #cfb7eb;
+    background-color: rgb(57, 4, 127);
     padding-top: 8px;
     padding-bottom: 8px;
     padding-left: 12px;
@@ -61,6 +81,10 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
+}
+
+.nav-button-hamburger:hover {
+    background-color: rgb(171, 128, 228);
 }
 
 .nav-menu-icon {
@@ -77,10 +101,11 @@
 .navbar-container-menu-sm {
     display: flex;
     flex-direction: column;
-    height: 230px;
+    height: 210px;
     width: 100%;
-    background-color: blueviolet;
+    background-image: linear-gradient(to top, rgb(40, 24, 82), blueviolet, rgb(12, 1, 27));
     border: 1px solid black;
+    box-shadow: 1px 1px 10px 3px black;
     position: fixed;
     padding: 14px;
     list-style-type: none;

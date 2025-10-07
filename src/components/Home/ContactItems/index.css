@@ -40,19 +40,19 @@
 
 @media screen and (max-width: 767px) {
     .contact-item {
-        width: 130px;
-        height: 90px;
+        width: 160px;
+        height: 100px;
     }
 
     .contact-logo-item {
-        width: 24px;
+        width: 26px;
     }
 
     .contact-title {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .contact-display {
-        font-size: 7px;
+        font-size: 10px;
     }
 }

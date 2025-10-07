@@ -113,23 +113,47 @@ const projectList = [
 ];
 
 const contactItems = [
-  {id: 0, logo: 'https://res.cloudinary.com/dlhgbo0ji/image/upload/v1759643775/email_1_mthhlk.png',
-    title: 'Email', displayText: 'asiyasmuhammed18@gmail.com', link: 'mailto:asiyasmuhammed18@gmail.com'},
-  {id: 1, logo: 'https://res.cloudinary.com/dlhgbo0ji/image/upload/v1759643790/iphone_qjbzii.png',
-    title: 'Phone', displayText: '+91 9048999825', link: 'tel: +91 9048999825'},
-  {id: 2, logo: 'https://res.cloudinary.com/dlhgbo0ji/image/upload/v1759643812/map_bha8cz.png',
-    title: 'Location', displayText: 'Kerala, Malappuram', link: 'https://www.google.com/maps?q=Moorkkanad,+Kerala target="_blank"'},
-  {id: 3, logo: 'https://res.cloudinary.com/dlhgbo0ji/image/upload/v1759643800/linkedin_yqllr8.png',
-    title: 'Linkedin', displayText: 'Muhammed Asiyas', link: 'https://linkedin.com/in/muhammed-asiyas'},
-]
+  {
+    id: 0,
+    logo: "https://res.cloudinary.com/dlhgbo0ji/image/upload/v1759643775/email_1_mthhlk.png",
+    title: "Email",
+    displayText: "asiyasmuhammed18@gmail.com",
+    link: "mailto:asiyasmuhammed18@gmail.com",
+  },
+  {
+    id: 1,
+    logo: "https://res.cloudinary.com/dlhgbo0ji/image/upload/v1759643790/iphone_qjbzii.png",
+    title: "Phone",
+    displayText: "+91 9048999825",
+    link: "tel: +91 9048999825",
+  },
+  {
+    id: 2,
+    logo: "https://res.cloudinary.com/dlhgbo0ji/image/upload/v1759643812/map_bha8cz.png",
+    title: "Location",
+    displayText: "Kerala, Malappuram",
+    link: 'https://www.google.com/maps?q=Moorkkanad,+Kerala target="_blank"',
+  },
+  {
+    id: 3,
+    logo: "https://res.cloudinary.com/dlhgbo0ji/image/upload/v1759643800/linkedin_yqllr8.png",
+    title: "Linkedin",
+    displayText: "Muhammed Asiyas",
+    link: "https://linkedin.com/in/muhammed-asiyas",
+  },
+];
 
 const Home = () => (
   <div className="home-container">
     <Header />
     <div className="all-my-container" id="home">
       <div className="my-container">
+        <div class="my-image-sm">
+          <img className="image-sm" src="https://res.cloudinary.com/dlhgbo0ji/image/upload/v1759390148/asiyassss_mzqpn8.png" />
+          <span class="circle-spin"></span>
+        </div>
         <div>
-          <h1 className="name">Hi, I'm Muhammed Asiyas</h1>
+          <h1 className="">Hi, I'm Muhammed Asiyas</h1>
           <p className="my-summary">
             Passionate Full Stack Developer specializing in modern web
             technologies. I create scalable applications with clean code and
@@ -155,14 +179,14 @@ const Home = () => (
         />
       </div>
     </div>
-    <div className="skills-container" id='skills'>
-        <h1 className="technical-skill-head">TECHNICAL SKILLS</h1>
-        <ul className="technical-skill-container">
-          {skillsArray.map((eachItem) => (
-            <TechnicalSkills key={eachItem.id} skillsItem={eachItem} />
-          ))}
-        </ul>
-      </div>
+    <div className="skills-container" id="skills">
+      <h1 className="technical-skill-head">TECHNICAL SKILLS</h1>
+      <ul className="technical-skill-container">
+        {skillsArray.map((eachItem) => (
+          <TechnicalSkills key={eachItem.id} skillsItem={eachItem} />
+        ))}
+      </ul>
+    </div>
     <div id="projects" className="project-container">
       <h1 className="project-head">PROJECTS</h1>
       <div className="project-list-container">
@@ -174,7 +198,7 @@ const Home = () => (
     <div id="contacts" className="contact-container">
       <h1 className="get-in-touch-head">GET IN TOUCH</h1>
       <ul className="contact-items-container">
-        {contactItems.map(eachItem => (
+        {contactItems.map((eachItem) => (
           <ContactItems key={eachItem.id} contactItem={eachItem} />
         ))}
       </ul>

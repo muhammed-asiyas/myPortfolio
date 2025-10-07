@@ -1,4 +1,4 @@
-.nav-item {
+.nav-item-lg {
     font-family: Bahnschrift;
     font-size: 19px;
     cursor: pointer;
@@ -7,31 +7,44 @@
     margin: 0px;
 }
 
-.nav-item:hover {
-    color: rgb(7, 7, 7);
+.nav-item-lg:hover {
+    color: blueviolet;
+}
+
+.nav-item-sm {
+    font-family: Bahnschrift;
+    font-size: 19px;
+    cursor: pointer;
+    font-weight: 700;
+    color: #eee6f4;
+    margin: 0px;
+}
+
+.nav-item-sm:hover {
+    color: rgb(4, 4, 4);
 }
 
 .link-item {
     text-decoration: none;
 }
 
-.nav-item-sm {
+.nav-item-sm-item {
     list-style-type: none;
     margin: 6px;
 }
 
-.nav-item-lg {
+.nav-item-lg-item {
     list-style-type: none;
 }
 
 @media screen and (max-width: 767px) {
-    .nav-item-lg {
+    .nav-item-lg-item {
         display: none;
     }
 }
 
 @media screen and (min-width: 768px) {
-    .nav-item-sm {
+    .nav-item-sm-item {
         display: none;
     }
 }

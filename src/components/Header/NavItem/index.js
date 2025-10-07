@@ -5,13 +5,13 @@ const NavItem = (props) => {
   const { item, link } = navItem;
   return (
     <>
-      <li className="nav-item-lg">
-        <a className="nav-item link-item" href={link}>
+      <li className="nav-item-lg-item">
+        <a className="nav-item-lg link-item" href={link}>
           {item}
         </a>
       </li>
-      <li className="nav-item-sm">
-        <a className="nav-item link-item" href={link}>
+      <li className="nav-item-sm-item">
+        <a className="nav-item-sm link-item" href={link}>
           {item}
         </a>
       </li>
