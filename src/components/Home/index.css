@@ -187,7 +187,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 600px;
+  min-height: 100vh;
   width: 100%;
   background-image: linear-gradient(to top, rgb(91, 24, 155), rgb(14, 1, 44));
 }
@@ -254,7 +254,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 70vh;
+  min-height: 70vh;
   width: 100%;
   background-image: linear-gradient(to bottom, rgb(14, 1, 44), blueviolet);
 }
@@ -280,11 +280,12 @@
   padding: 12px;
   margin: 16px;
   list-style-type: none;
+
 }
 
 @media screen and (max-width: 767px) {
   .contact-container {
-    height: 100vh;
+    min-height: 100vh;
   }
   .contact-items-container {
     width: 80%;
