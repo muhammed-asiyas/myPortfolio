@@ -2,4 +2,7 @@
     box-sizing: border-box;
     text-decoration: none;
     scroll-behavior: smooth;
+    transition: 0.8s;
+    font-family: Rockwell;
+    font-size: 18px;
 }

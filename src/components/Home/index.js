@@ -148,12 +148,14 @@ const Home = () => (
     <Header />
     <div className="all-my-container" id="home">
       <div className="my-container">
-        <div class="my-image-sm">
-          <img className="image-sm" src="https://res.cloudinary.com/dlhgbo0ji/image/upload/v1759390148/asiyassss_mzqpn8.png" />
-          <span class="circle-spin"></span>
+        <div className="image-sm-container">
+          <img
+            className="image-sm"
+            src="https://res.cloudinary.com/dlhgbo0ji/image/upload/v1759390148/asiyassss_mzqpn8.png"
+          />
         </div>
         <div>
-          <h1 className="">Hi, I'm Muhammed Asiyas</h1>
+          <h1 className="name">Hi, I'm Muhammed Asiyas</h1>
           <p className="my-summary">
             Passionate Full Stack Developer specializing in modern web
             technologies. I create scalable applications with clean code and

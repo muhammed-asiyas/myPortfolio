@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  background-color: rgb(38, 12, 98);
+  background-color: rgb(14, 1, 44);
 }
 
 .all-my-container {
@@ -52,45 +52,40 @@
   }
 }
 
-.my-image-sm {
-  position: relative;
-  width: 25rem;
-  height: 25rem;
-  border-radius: 50%;
+.image-sm-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-self: center;
+  width: 200px;
+  height: 200px;
+  background-color: rgb(38, 12, 98);
+  border: 1px solid azure;
+  border-radius: 50%;
+  transition: 3s;
 }
 
 .image-sm {
-  width: 120px;
+  width: 130px;
+  height: 170px;
+  transition: 2s;
+  margin-left: 36px;
+}
+.image-sm:hover {
+  opacity: 0;
 }
 
-.my-image-sm .circle-spin {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(0);
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border-top: .2rem solid rgb(235, 230, 230);
-    border-bottom: .2rem solid rgb(252, 245, 245);
-    border-left: .2rem solid blueviolet;
-    border-right: .2rem solid blueviolet;
-    animation: aboutSpinner 5s linear infinite; 
+.image-sm-container:hover {
+  background-color: blueviolet;
+  border: 1px solid rgb(226, 141, 250);
+  opacity: .9;
+  width: 30px;
 }
 
 @media screen and (min-width: 767px) {
-  .my-image-sm {
+  .image-sm-container {
     display: none;
   }
-}
-
-@keyframes aboutSpinner {
-    100% {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
 }
 
 .my-image {
@@ -98,11 +93,12 @@
   align-self: flex-end;
   width: 330px;
   padding-right: 40px;
+  transition: 3s;
 }
 
 .my-image:hover {
-  transition: 0.3s;
-  opacity: 0.8;
+  opacity: 0.3;
+  width: 280px;
 }
 
 @keyframes mymove {
@@ -131,7 +127,6 @@
   }
   .name {
     font-size: 34px;
-    text-align: start;
     padding-left: 12px;
   }
   .my-summary {
@@ -192,7 +187,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 650px;
+  height: 600px;
+  width: 100%;
+  background-image: linear-gradient(to top, rgb(91, 24, 155), rgb(14, 1, 44));
 }
 
 .technical-skill-head {
@@ -240,7 +237,7 @@
   align-items: center;
   min-height: 100vh;
   width: 100%;
-  background-color: rgb(38, 12, 98);
+  background-image: linear-gradient(to bottom, rgb(91, 24, 155),rgb(14, 1, 44));
 }
 
 .project-head {
@@ -259,7 +256,7 @@
   align-items: center;
   height: 70vh;
   width: 100%;
-  background-color: rgb(38, 12, 98);
+  background-image: linear-gradient(to bottom, rgb(14, 1, 44), blueviolet);
 }
 
 .get-in-touch-head {
