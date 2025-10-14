@@ -3,8 +3,16 @@
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+}
+
+.color-mode-home-container {
   background-color: rgb(14, 1, 44);
 }
+
+.dark-mode-home-container {
+  background-color: rgb(0, 0, 0);
+}
+
 
 .all-my-container {
   display: flex;
@@ -18,19 +26,31 @@
   flex-direction: row;
   justify-content: space-between;
   width: 90%;
-  background-image: linear-gradient(
-    to right,
-    rgb(120, 22, 206),
-    rgb(190, 213, 248)
-  );
   border-radius: 12px;
-  border: 1px solid rgb(38, 12, 98);
   box-shadow: 0px 0px 10px 0px #0c0c0c;
   padding: 12px;
   margin-top: 100px;
 }
 
-.name {
+.dark-my-container {
+  background-image: linear-gradient(
+    to right,
+    rgb(24, 2, 45),
+    rgb(0, 0, 0)
+  );
+  border: 1px solid rgb(125, 86, 163);
+
+}
+.color-my-container {
+  background-image: linear-gradient(
+    to right,
+    rgb(120, 22, 206),
+    rgb(190, 213, 248)
+  );
+  border: 1px solid rgb(38, 12, 98);
+}
+
+.color-name {
   text-align: center;
   font-size: 70px;
   color: rgb(10, 1, 19);
@@ -52,6 +72,30 @@
   }
 }
 
+
+
+.dark-name {
+  text-align: center;
+  font-size: 70px;
+  color: rgb(229, 214, 244);
+  animation: darkrotate 3s ease-in-out alternate infinite;
+  position: relative;
+}
+
+@keyframes darkrotate {
+  from {
+    transform: rotateY(-10deg);
+    text-shadow: 1px -1px blueviolet, 2px -1px blueviolet, 3px -2px blueviolet,
+      4px -2px blueviolet, 5px -3px blueviolet, 6px -3px blueviolet;
+  }
+  to {
+    transform: rotateY(10deg);
+    text-shadow: -1px -1px blueviolet, -2px -1px blueviolet,
+      -3px -2px blueviolet, -4px -2px blueviolet, -5px -3px blueviolet,
+      -6px -3px blueviolet;
+  }
+}
+
 .image-sm-container {
   display: flex;
   flex-direction: column;
@@ -59,8 +103,8 @@
   align-self: center;
   width: 200px;
   height: 200px;
-  background-color: rgb(38, 12, 98);
-  border: 1px solid azure;
+  background-color: rgb(30, 4, 53);
+  border: 1px solid rgb(228, 214, 230);
   border-radius: 50%;
   transition: 3s;
 }
@@ -76,8 +120,8 @@
 }
 
 .image-sm-container:hover {
-  background-color: blueviolet;
-  border: 1px solid rgb(226, 141, 250);
+  background-color: rgb(1, 1, 1);
+  border: 1px solid rgb(5, 5, 5);
   opacity: .9;
   width: 30px;
 }
@@ -112,10 +156,17 @@
 
 .my-summary {
   font-size: 24px;
-  color: #0d0219;
   font-weight: 600;
   font-family: Comic Sans MS;
   padding-left: 12px;
+}
+
+.color-my-summary {
+  color: #0d0219;
+}
+
+.dark-my-summary {
+  color: #ffffff;
 }
 
 @media screen and (max-width: 767px) {
@@ -125,7 +176,11 @@
   .my-image {
     display: none;
   }
-  .name {
+  .color-name {
+    font-size: 34px;
+    padding-left: 12px;
+  }
+  .dark-name {
     font-size: 34px;
     padding-left: 12px;
   }
@@ -149,26 +204,39 @@
 }
 
 .vertical {
-  border-left: 3px solid rgb(27, 26, 28);
   height: 200px;
 }
 
+.color-vertical {
+  border-left: 3px solid rgb(27, 26, 28);
+}
+
+.dark-vertical {
+  border-left: 3px solid rgb(239, 235, 243);
+}
+
 .project-count {
-  color: #060606;
   font-size: 30px;
   font-weight: 700;
   font-style: italic;
 }
 
+
 .coding-hour-count {
-  color: #060606;
   font-size: 30px;
   font-weight: 700;
   font-style: italic;
+}
+
+.color-count {
+  color: #060606;
+}
+
+.dark-count {
+  color: #fefdfd;
 }
 
 .progress-description {
-  color: rgb(18, 1, 23);
   font-size: 28px;
   font-family: Comic Sans MS;
 }
@@ -189,7 +257,14 @@
   justify-content: center;
   min-height: 100vh;
   width: 100%;
+}
+
+.color-skills-container {
   background-image: linear-gradient(to top, rgb(91, 24, 155), rgb(14, 1, 44));
+}
+
+.dark-skills-container {
+  background-image: linear-gradient(to top, rgb(16, 2, 28), rgb(0, 0, 0));
 }
 
 .technical-skill-head {
@@ -237,6 +312,13 @@
   align-items: center;
   min-height: 100vh;
   width: 100%;
+}
+
+.dark-project-container {
+  background-image: linear-gradient(to top, rgb(0, 0, 0), rgb(16, 2, 28));
+}
+
+.color-project-container {
   background-image: linear-gradient(to bottom, rgb(91, 24, 155),rgb(14, 1, 44));
 }
 
@@ -256,7 +338,14 @@
   align-items: center;
   min-height: 70vh;
   width: 100%;
-  background-image: linear-gradient(to bottom, rgb(14, 1, 44), blueviolet);
+}
+
+.dark-contact-container {
+   background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgb(16, 2, 28));
+}
+
+.color-contact-container {
+   background-image: linear-gradient(to bottom, rgb(14, 1, 44), blueviolet);
 }
 
 .get-in-touch-head {

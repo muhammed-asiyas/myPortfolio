@@ -3,6 +3,7 @@ import Header from "../Header";
 import TechnicalSkills from "./TechnicalSkills";
 import ProjectList from "./ProjectList";
 import ContactItems from "./ContactItems";
+import ThemeContext from "../../context/ThemeContext";
 
 const skillsArray = [
   {
@@ -55,44 +56,27 @@ const skillsArray = [
 const projectList = [
   {
     id: 1,
-    title: "Nxt Trendz ( ECommerce Clone - Amazon, Flipkart)",
-    description:
-      "Rolled out an innovative e-commerce platform patterned after Amazon and Flipkart.",
-    features: [
-      {
-        id: "A1",
-        feature:
-          "Nxt Trendz Designed pages for Login, Products, and Product details with React Router and React components.",
-      },
-      {
-        id: "A2",
-        feature:
-          "Nxt Trendz Ensured user security through JWT tokens, REST API calls, and local storage.",
-      },
-    ],
-    projectLink: "https://nxt-watch-sxm2.vercel.app/",
-  },
-  {
-    id: 2,
     title: "Nxt Watch (YouTube Clone)",
     description:
       "Rolled out an innovative e-commerce platform patterned after Amazon and Flipkart.",
     features: [
       {
         id: "B1",
-        feature:
-          "YouTube Designed pages for Login, Products, and Product details with React Router and React components.",
+        feature: "This project is like YouTube.",
       },
       {
         id: "B2",
-        feature:
-          "YouTube Ensured user security through JWT tokens, REST API calls, and local storage.",
+        feature: "This is my first project using more functions in React js",
+      },
+      {
+        id: "B3",
+        feature: "This project used vercel deployment for the deploy",
       },
     ],
     projectLink: "https://nxt-watch-sxm2.vercel.app/",
   },
   {
-    id: 3,
+    id: 2,
     title: "Tasty Kitchens (Swiggy/Zomato Clone)",
     description:
       "Rolled out an innovative e-commerce platform patterned after Amazon and Flipkart.",
@@ -106,6 +90,10 @@ const projectList = [
         id: "C2",
         feature:
           "Tastey Ensured user security through JWT tokens, REST API calls, and local storage.",
+      },
+      {
+        id: "C3",
+        feature: "This project used vercel deployment for the deploy",
       },
     ],
     projectLink: "https://tastey-kitchens-te6j.vercel.app/",
@@ -144,68 +132,84 @@ const contactItems = [
 ];
 
 const Home = () => (
-  <div className="home-container">
-    <Header />
-    <div className="all-my-container" id="home">
-      <div className="my-container">
-        <div className="image-sm-container">
-          <img
-            className="image-sm"
-            src="https://res.cloudinary.com/dlhgbo0ji/image/upload/v1759390148/asiyassss_mzqpn8.png"
-          />
-        </div>
-        <div>
-          <h1 className="name">Hi, I'm Muhammed Asiyas</h1>
-          <p className="my-summary">
-            Passionate Full Stack Developer specializing in modern web
-            technologies. I create scalable applications with clean code and
-            exceptional user experiences.
-          </p>
-          <div className="coding-progress-container">
-            <div className="coding-hour">
-              <h1 className="project-count">24+</h1>
-              <h1 className="progress-description">
-                Rigourous Assignment and Projects
-              </h1>
-            </div>
-            <div className="vertical"></div>
-            <div className="coding-hour">
-              <h1 className="coding-hour-count">600+</h1>
-              <h1 className="progress-description">Hours Of Coding</h1>
+  <ThemeContext.Consumer>
+    {(value) => {
+      const { isDark } = value;
+      const HomeContainerBackground = isDark ? 'dark-mode-home-container' : 'color-mode-home-container'
+      const MyContainerBackground = isDark ? 'dark-my-container' : 'color-my-container'
+      const SkillsContainerBackground = isDark ? 'dark-skills-container' : 'color-skills-container'
+      const ProjectContainerBackground = isDark ? 'dark-project-container' : 'color-project-container'
+      const ContactContainerBackground = isDark ? 'dark-contact-container' : 'color-contact-container'
+      const NameColor = isDark ? 'dark-name' : 'color-name'
+      const MySummaryColor = isDark ? 'dark-my-summary' : 'color-my-summary'
+      const VerticalColor = isDark ? 'dark-vertical' : 'color-vertical'
+      const FontColor = isDark ? 'dark-count' : 'color-count'
+      return (
+        <div className={`home-container ${HomeContainerBackground}`}>
+          <Header />
+          <div className="all-my-container" id="home">
+            <div className={`my-container ${MyContainerBackground}`}>
+              <div className="image-sm-container">
+                <img
+                  className="image-sm"
+                  src="https://res.cloudinary.com/dlhgbo0ji/image/upload/v1759390148/asiyassss_mzqpn8.png"
+                />
+              </div>
+              <div>
+                <h1 className={NameColor}>Hi, I'm Muhammed Asiyas</h1>
+                <p className={`my-summary ${MySummaryColor}`}>
+                  Passionate Full Stack Developer specializing in modern web
+                  technologies. I create scalable applications with clean code
+                  and exceptional user experiences.
+                </p>
+                <div className="coding-progress-container">
+                  <div className="coding-hour">
+                    <h1 className={`project-count ${FontColor}`}>24+</h1>
+                    <h1 className={`progress-description ${FontColor}`}>
+                      Rigourous Assignment and Projects
+                    </h1>
+                  </div>
+                  <div className={`vertical ${VerticalColor}`}></div>
+                  <div className="coding-hour">
+                    <h1 className={`coding-hour-count ${FontColor}`}>600+</h1>
+                    <h1 className={`progress-description ${FontColor}`}>Hours Of Coding</h1>
+                  </div>
+                </div>
+              </div>
+              <img
+                className="my-image"
+                src="https://res.cloudinary.com/dlhgbo0ji/image/upload/v1759390148/asiyassss_mzqpn8.png"
+              />
             </div>
           </div>
+          <div className={`skills-container ${SkillsContainerBackground}`} id="skills">
+            <h1 className="technical-skill-head">TECHNICAL SKILLS</h1>
+            <ul className="technical-skill-container">
+              {skillsArray.map((eachItem) => (
+                <TechnicalSkills key={eachItem.id} skillsItem={eachItem} />
+              ))}
+            </ul>
+          </div>
+          <div id="projects" className={`project-container ${ProjectContainerBackground}`}>
+            <h1 className="project-head">PROJECTS</h1>
+            <div className="project-list-container">
+              {projectList.map((eachItem) => (
+                <ProjectList key={eachItem.id} projectList={eachItem} />
+              ))}
+            </div>
+          </div>
+          <div id="contacts" className={`contact-container ${ContactContainerBackground}`}>
+            <h1 className="get-in-touch-head">GET IN TOUCH</h1>
+            <ul className="contact-items-container">
+              {contactItems.map((eachItem) => (
+                <ContactItems key={eachItem.id} contactItem={eachItem} />
+              ))}
+            </ul>
+          </div>
         </div>
-        <img
-          className="my-image"
-          src="https://res.cloudinary.com/dlhgbo0ji/image/upload/v1759390148/asiyassss_mzqpn8.png"
-        />
-      </div>
-    </div>
-    <div className="skills-container" id="skills">
-      <h1 className="technical-skill-head">TECHNICAL SKILLS</h1>
-      <ul className="technical-skill-container">
-        {skillsArray.map((eachItem) => (
-          <TechnicalSkills key={eachItem.id} skillsItem={eachItem} />
-        ))}
-      </ul>
-    </div>
-    <div id="projects" className="project-container">
-      <h1 className="project-head">PROJECTS</h1>
-      <div className="project-list-container">
-        {projectList.map((eachItem) => (
-          <ProjectList key={eachItem.id} projectList={eachItem} />
-        ))}
-      </div>
-    </div>
-    <div id="contacts" className="contact-container">
-      <h1 className="get-in-touch-head">GET IN TOUCH</h1>
-      <ul className="contact-items-container">
-        {contactItems.map((eachItem) => (
-          <ContactItems key={eachItem.id} contactItem={eachItem} />
-        ))}
-      </ul>
-    </div>
-  </div>
+      );
+    }}
+  </ThemeContext.Consumer>
 );
 
 export default Home;
