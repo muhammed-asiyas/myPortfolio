@@ -1,8 +1,6 @@
 import { Component } from "react";
 import "./index.css";
 import NavItem from "./NavItem";
-import { BsBrightnessHigh } from "react-icons/bs";
-import { IoMoon } from "react-icons/io5";
 import ThemeContext from "../../context/ThemeContext";
 
 const navItemList = [
@@ -49,7 +47,7 @@ class Header extends Component {
           const onChangeTheme = () => {
             toggleTheme();
           };
-          const themeIcon = isDark ? <BsBrightnessHigh className="BsBrightnessHigh" /> : <IoMoon className="IoMoon" />;
+          const themeIcon = isDark ? 'https://res.cloudinary.com/dlhgbo0ji/image/upload/v1760448123/sun_wkuard.png' : 'https://res.cloudinary.com/dlhgbo0ji/image/upload/v1760448249/sleep-mode_djldqi.png'
           const ButtonColor = isDark ? 'dark-toggle' : 'color-toggle'
           return (
             <nav className={`navbar-container-menu-sm ${navBarSmBackground}`}>
@@ -70,7 +68,7 @@ class Header extends Component {
                     className={`toggle-theme-button-sm ${ButtonColor}`}
                     onClick={onChangeTheme}
                   >
-                    {themeIcon}
+                    <img className="theme-icon" src={themeIcon} />
                   </button>
               {navItemList.map((eachItem) => (
                 <NavItem key={eachItem.id} navItem={eachItem} />
@@ -115,7 +113,7 @@ class Header extends Component {
           const onChangeTheme = () => {
             toggleTheme();
           };
-          const themeIcon = isDark ? <BsBrightnessHigh className="BsBrightnessHigh" /> : <IoMoon className="IoMoon" />;
+          const themeIcon = isDark ? 'https://res.cloudinary.com/dlhgbo0ji/image/upload/v1760448123/sun_wkuard.png' : 'https://res.cloudinary.com/dlhgbo0ji/image/upload/v1760448249/sleep-mode_djldqi.png'
           const headerBackground = isDark
             ? "dark-header-container"
             : "color-header-container";
@@ -136,7 +134,7 @@ class Header extends Component {
                     className={`toggle-theme-button-lg ${ButtonColor}`}
                     onClick={onChangeTheme}
                   >
-                    {themeIcon}
+                    <img className="theme-icon" src={themeIcon} />
                   </button>
                   {navItemList.map((eachItem) => (
                     <NavItem key={eachItem.id} navItem={eachItem} />

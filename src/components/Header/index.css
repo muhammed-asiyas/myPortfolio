@@ -113,7 +113,7 @@
 }
 
 .nav-button-hamburger {
-    background-color: rgb(57, 4, 127);
+    background-color: rgb(95, 8, 127);
     padding-top: 8px;
     padding-bottom: 8px;
     padding-left: 12px;
@@ -124,7 +124,7 @@
 }
 
 .nav-button-hamburger:hover {
-    background-color: rgb(171, 128, 228);
+    background-color: rgb(183, 179, 188);
 }
 
 .nav-menu-icon {
@@ -208,4 +208,8 @@
 
 .IoMoon {
     color: #250229;
+}
+
+.theme-icon {
+    width: 15px;
 }
