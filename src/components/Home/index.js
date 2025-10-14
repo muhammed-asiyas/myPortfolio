@@ -103,28 +103,28 @@ const projectList = [
 const contactItems = [
   {
     id: 0,
-    logo: "https://res.cloudinary.com/dlhgbo0ji/image/upload/v1759643775/email_1_mthhlk.png",
+    logo: "https://res.cloudinary.com/dlhgbo0ji/image/upload/v1760451296/email_2_mcj1ea.png",
     title: "Email",
     displayText: "asiyasmuhammed18@gmail.com",
     link: "mailto:asiyasmuhammed18@gmail.com",
   },
   {
     id: 1,
-    logo: "https://res.cloudinary.com/dlhgbo0ji/image/upload/v1759643790/iphone_qjbzii.png",
+    logo: "https://res.cloudinary.com/dlhgbo0ji/image/upload/v1760451308/phone_z07cwz.png",
     title: "Phone",
     displayText: "+91 9048999825",
     link: "tel: +91 9048999825",
   },
   {
     id: 2,
-    logo: "https://res.cloudinary.com/dlhgbo0ji/image/upload/v1759643812/map_bha8cz.png",
+    logo: "https://res.cloudinary.com/dlhgbo0ji/image/upload/v1760451321/location_txsyfj.png",
     title: "Location",
     displayText: "Kerala, Malappuram",
     link: 'https://www.google.com/maps?q=Moorkkanad,+Kerala target="_blank"',
   },
   {
     id: 3,
-    logo: "https://res.cloudinary.com/dlhgbo0ji/image/upload/v1759643800/linkedin_yqllr8.png",
+    logo: "https://res.cloudinary.com/dlhgbo0ji/image/upload/v1760451284/linkedin_1_gplvga.png",
     title: "Linkedin",
     displayText: "Muhammed Asiyas",
     link: "https://linkedin.com/in/muhammed-asiyas",
@@ -144,12 +144,13 @@ const Home = () => (
       const MySummaryColor = isDark ? 'dark-my-summary' : 'color-my-summary'
       const VerticalColor = isDark ? 'dark-vertical' : 'color-vertical'
       const FontColor = isDark ? 'dark-count' : 'color-count'
+      const ImageContainer = isDark ? 'dark-image-sm-container' : 'color-image-sm-container'
       return (
         <div className={`home-container ${HomeContainerBackground}`}>
           <Header />
           <div className="all-my-container" id="home">
             <div className={`my-container ${MyContainerBackground}`}>
-              <div className="image-sm-container">
+              <div className={`image-sm-container ${ImageContainer}`}>
                 <img
                   className="image-sm"
                   src="https://res.cloudinary.com/dlhgbo0ji/image/upload/v1759390148/asiyassss_mzqpn8.png"

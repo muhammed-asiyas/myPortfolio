@@ -44,15 +44,21 @@
 }
 
 .contact-title {
-    color: cornsilk;
     font-size: 16px;
     font-weight: 600;
     margin: 10px;
     font-family: Segoe Print;
 }
 
-.contact-display {
+.dark-font {
     color: cornsilk;
+}
+
+.color-font {
+    color: black;
+}
+
+.contact-display {
     font-size: 10px;
     font-family: Rockwell;
     font-weight: 400;

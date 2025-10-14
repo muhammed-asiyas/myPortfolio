@@ -9,11 +9,12 @@ const ContactItems = (props) => {
       {(value) => {
         const { isDark } = value;
         const ContactItemBackground = isDark ? 'dark-contact-item' : 'color-contact-item'
+        const FontColor = isDark ? 'dark-font' : 'color-font'
         return (
           <a href={link} className={`${ContactItemBackground}`}>
             <img className="contact-logo-item" src={logo} />
-            <h1 className="contact-title">{title}</h1>
-            <p className="contact-display">{displayText}</p>
+            <h1 className={`contact-title ${FontColor}`}>{title}</h1>
+            <p className={`contact-display ${FontColor}`}>{displayText}</p>
           </a>
         );
       }}
