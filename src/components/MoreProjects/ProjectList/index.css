@@ -28,6 +28,7 @@
     width: 550px;
 }
 
+
 .color-visit-button {
   width: 250px;
   padding-bottom: 8px;
@@ -76,4 +77,26 @@
   font-size: 16px;
   font-weight: 800;
   border-radius: 16px;
+}
+
+@media screen and (max-width: 767px) {
+  .button-container {
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .color-visit-button {
+    width: 120px;
+    font-size: 10px;
+  }
+  .dark-visit-button {
+    width: 120px;
+    font-size: 10px;
+  }
+  .color-visit-button:hover {
+    font-size: 11px;
+  }
+  .dark-visit-button:hover {
+    font-size: 11px;
+  }
 }

@@ -1,0 +1,118 @@
+.color-certificate-item-box {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  width: 25%;
+  padding: 12px;
+  border: 2px solid azure;
+  box-shadow: 0px 0px 8px 0px black;
+  border-radius: 12px;
+  margin: 10px;
+  background-color: rgb(235, 220, 248);
+}
+
+.color-certificate-item-box:hover {
+  box-shadow: 0px 4px 8px 0px black;
+  border: 2px solid rgb(220, 255, 255);
+}
+
+.dark-certificate-item-box {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  width: 25%;
+  padding: 12px;
+  border: 1px solid rgb(255, 255, 255);
+  box-shadow: 0px 0px 8px 0px black;
+  border-radius: 12px;
+  margin: 10px;
+  background-image: linear-gradient(to right, rgb(35, 4, 63), rgb(0, 0, 0));
+}
+
+.dark-certificate-item-box:hover {
+  border: 2px dashed rgb(220, 255, 255);
+}
+
+@media screen and (max-width: 767px) {
+  .dark-certificate-item-box {
+    width: 65%;
+  }
+
+  .color-certificate-item-box {
+    width: 65%;
+  }
+}
+
+.certificate-item-name {
+  font-family: Comic Sans MS;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.color-certificate-name {
+  color: rgb(28, 7, 48);
+  text-shadow: 1px 1px 1px rgb(119, 106, 106);
+}
+
+.dark-certificate-name {
+  color: azure;
+  text-shadow: 1px 1px 2px rgb(183, 164, 164);
+}
+
+.issue-date {
+  font-family: Bahnschrift SemiBold;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.color-certificate-date {
+  color: rgb(28, 7, 48);
+}
+
+.dark-certificate-date {
+  color: azure;
+}
+
+.color-view-certificate {
+  width: 120px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  cursor: pointer;
+  border-radius: 12px;
+  box-shadow: 0px 0px 4px 0px rgb(46, 38, 38);
+  background-image: linear-gradient(to right, mintcream, rgb(181, 114, 228));
+  border: 1px solid white;
+  color: #070607;
+  font-family: Segoe Print;
+  font-weight: 600;
+  font-size: 10px;
+}
+
+.color-view-certificate:hover {
+  box-shadow: 0px 0px 8px 2px rgb(11, 11, 11);
+  font-size: 11px;
+  font-weight: 800;
+  border-radius: 14px;
+}
+
+.dark-view-certificate {
+  width: 120px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  cursor: pointer;
+  border-radius: 12px;
+  box-shadow: 0px 0px 4px 0px black;
+  background-image: linear-gradient(to right, rgb(24, 2, 45), rgb(2, 2, 2));
+  border: 1px solid #fffdff;
+  color: #ffffff;
+  font-family: Segoe Print;
+  font-weight: 600;
+  font-size: 10px;
+}
+
+.dark-view-certificate:hover {
+  border: 1px dashed azure;
+  font-size: 11px;
+  font-weight: 800;
+  border-radius: 14px;
+}
