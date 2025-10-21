@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./index.css";
 import ThemeContext from "../../../context/ThemeContext";
 
@@ -9,17 +10,18 @@ const NavItem = (props) => {
       {(value) => {
         const { isDark } = value;
         const navItemSmColor = isDark ? 'light-nav-item-sm' : 'color-nav-item-sm'
+        const navItemLg = isDark ? 'dark-nav-item-lg' : 'color-nav-item-lg'
         return (
           <>
             <li className="nav-item-lg-item">
-              <a className="nav-item-lg link-item" href={link}>
+              <Link to={link} className={`color-nav-item-lg link-item ${navItemLg}`}>
                 {item}
-              </a>
+              </Link>
             </li>
             <li className="nav-item-sm-item">
-              <a className={`link-item ${navItemSmColor}`} href={link}>
+              <Link to={link} className={`link-item ${navItemSmColor}`}>
                 {item}
-              </a>
+              </Link>
             </li>
           </>
         );

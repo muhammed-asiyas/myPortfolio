@@ -8,12 +8,14 @@
     cursor: pointer;
     border-radius: 20px;
     box-shadow: 0px 0px 6px 0px black;
-    background-image: radial-gradient(circle, blueviolet, rgb(18, 7, 28));
+    border: 2px solid azure;
+    background-image: radial-gradient(circle, mintcream,rgb(181, 114, 228));
     margin: 16px;
 }
 
 .color-contact-item:hover {
     box-shadow: 0px 0px 10px 2px rgb(7, 7, 7);
+    border: 2px dashed azure;
 }
 
 .dark-contact-item {
@@ -25,14 +27,15 @@
     height: 130px;
     cursor: pointer;
     border-radius: 20px;
-    border: 1px solid #ffffff;
+    border: 2px solid azure;
     background-image: linear-gradient(to left, rgb(24, 2, 45),
     rgb(14, 14, 15));
     margin: 16px;
 }
 
 .dark-contact-item:hover {
-    box-shadow: 0px 0px 7px 0px rgb(252, 252, 253);
+    box-shadow: 0px 0px 5px 0px rgb(252, 252, 253);
+    border: 2px dashed azure;
 }
 
 

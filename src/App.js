@@ -1,5 +1,7 @@
 import { Component } from "react";
+import { Route, Switch } from "react-router-dom";
 import Home from "./components/Home";
+import MoreProjects from "./components/MoreProjects";
 import ThemeContext from "./context/ThemeContext";
 import "./App.css";
 
@@ -22,7 +24,10 @@ class App extends Component {
           toggleTheme: this.onChangeTheme,
         }}
       >
-        <Home />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/projects" component={MoreProjects} />
+        </Switch>
       </ThemeContext.Provider>
     );
   }

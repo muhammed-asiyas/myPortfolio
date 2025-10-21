@@ -1,70 +1,86 @@
-.nav-item-lg {
-    font-family: Bahnschrift;
-    font-size: 19px;
-    cursor: pointer;
-    font-weight: 700;
-    color: #ffffff;
-    margin: 0px;
+
+.color-nav-item-lg {
+  font-family: Bahnschrift;
+  font-size: 19px;
+  cursor: pointer;
+  font-weight: 700;
+  color: #000000;
+  margin: 0px;
 }
 
-.nav-item-lg:hover {
-    color: blueviolet;
+.color-nav-item-lg:hover {
+  color: rgb(255, 255, 255);
+}
+
+.dark-nav-item-lg {
+  font-family: Bahnschrift;
+  font-size: 19px;
+  cursor: pointer;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0px;
+}
+
+.dark-nav-item-lg:hover {
+  color: rgb(123, 105, 192);
 }
 
 .color-nav-item-sm {
-    font-family: Bahnschrift;
-    font-size: 19px;
-    cursor: pointer;
-    font-weight: 700;
-    color: #eee6f4;
-    margin: 0px;
+  font-family: Bahnschrift;
+  font-size: 17px;
+  cursor: pointer;
+  font-weight: 400;
+  color: rgb(71, 68, 68);
+  margin: 0px;
 }
 
 .color-nav-item-sm:hover {
-    color: rgb(4, 4, 4);
+  color: rgb(23, 8, 49);
+  font-weight: 600;
 }
 
 .light-nav-item-sm {
-    font-family: Bahnschrift;
-    font-size: 19px;
-    cursor: pointer;
-    font-weight: 700;
-    color: #eee6f4;
-    margin: 0px;
+  font-family: Bahnschrift;
+  font-size: 17px;
+  cursor: pointer;
+  font-weight: 400;
+  color: #eee6f4;
+  margin: 0px;
 }
 
 .light-nav-item-sm:hover {
-    color: blueviolet;
+  color: blueviolet;
+  font-weight: 600;
 }
 
 .link-item {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .nav-item-sm-item {
-    list-style-type: none;
-    margin: 6px;
+  list-style-type: none;
+  margin: 6px;
 }
 
 .nav-item-lg-item {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 @media screen and (max-width: 767px) {
-    .nav-item-lg-item {
-        display: none;
-    }
+  .nav-item-lg-item {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 768px) {
-    .nav-item-sm-item {
-        display: none;
-    }
+  .nav-item-sm-item {
+    display: none;
+  }
 }
 
-.nav-bar-hr-line{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    border: 1px dashed rgb(231, 130, 240);
+.nav-bar-hr-line {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 1px dashed rgb(231, 130, 240);
 }

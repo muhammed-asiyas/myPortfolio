@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./index.css";
 import FeaturesList from "./FeaturesList";
 import ThemeContext from "../../../context/ThemeContext";
@@ -11,7 +12,7 @@ const ProjectList = (props) => {
         const { isDark } = value;
         const ProjectListBackground = isDark ? 'dark-project-list-item' : 'color-project-list-item'
         const ProjectNameColor = isDark ? 'dark-project-name' : 'color-project-name'
-        const DescriptionColor = isDark ? 'dark-description' : ''
+        const DescriptionColor = isDark ? 'dark-description' : 'color-description'
         const VisitButtonTheme = isDark ? 'dark-visit-project-button' : 'color-visit-project-button'
         return (
           <li className={`project-list-item ${ProjectListBackground}`}>
@@ -22,8 +23,8 @@ const ProjectList = (props) => {
                 <FeaturesList key={eachItem.id} featuresItem={eachItem} />
               ))}
             </ul>
-            <a className="a-tag-button" href={projectLink}>
-              <button type="button" className={`${VisitButtonTheme}`}>
+            <a href={projectLink}>
+              <button type="button" className={`a-tag-button ${VisitButtonTheme}`}>
                 Visit Project
               </button>
             </a>

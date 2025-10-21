@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
 import "./index.css";
 import Header from "../Header";
 import TechnicalSkills from "./TechnicalSkills";
 import ProjectList from "./ProjectList";
 import ContactItems from "./ContactItems";
+import MoreProjects from "../MoreProjects";
 import ThemeContext from "../../context/ThemeContext";
 
 const skillsArray = [
@@ -145,6 +147,9 @@ const Home = () => (
       const VerticalColor = isDark ? 'dark-vertical' : 'color-vertical'
       const FontColor = isDark ? 'dark-count' : 'color-count'
       const ImageContainer = isDark ? 'dark-image-sm-container' : 'color-image-sm-container'
+      const HeadItemStyle = isDark ? 'head-item' : 'color-head-item'
+      const ImageContainerLarge = isDark ? '' : 'color-image-container'
+      const ProjectButtonBackground = isDark ? 'dark-more-project-button' : 'color-more-project-button'
       return (
         <div className={`home-container ${HomeContainerBackground}`}>
           <Header />
@@ -177,14 +182,17 @@ const Home = () => (
                   </div>
                 </div>
               </div>
-              <img
+              <div className={`my-image-container ${ImageContainerLarge}`}>
+                <img
                 className="my-image"
                 src="https://res.cloudinary.com/dlhgbo0ji/image/upload/v1759390148/asiyassss_mzqpn8.png"
               />
+              </div>
+              
             </div>
           </div>
           <div className={`skills-container ${SkillsContainerBackground}`} id="skills">
-            <h1 className="technical-skill-head">TECHNICAL SKILLS</h1>
+            <h1 className={`${HeadItemStyle}`}>TECHNICAL SKILLS</h1>
             <ul className="technical-skill-container">
               {skillsArray.map((eachItem) => (
                 <TechnicalSkills key={eachItem.id} skillsItem={eachItem} />
@@ -192,15 +200,23 @@ const Home = () => (
             </ul>
           </div>
           <div id="projects" className={`project-container ${ProjectContainerBackground}`}>
-            <h1 className="project-head">PROJECTS</h1>
+            <h1 className={`${HeadItemStyle}`}>PROJECTS</h1>
             <div className="project-list-container">
               {projectList.map((eachItem) => (
                 <ProjectList key={eachItem.id} projectList={eachItem} />
               ))}
             </div>
+            <Link to="/projects">
+              <button type="button" className={`more-project-button ${ProjectButtonBackground}`}>Click Here To Explore More Projects</button>
+            </Link>
+
+            <div className="certificates-container">
+              <h1 className={`${HeadItemStyle}`}>CERTIFICATES</h1>
+            </div>
+            
           </div>
           <div id="contacts" className={`contact-container ${ContactContainerBackground}`}>
-            <h1 className="get-in-touch-head">GET IN TOUCH</h1>
+            <h1 className={`${HeadItemStyle}`}>GET IN TOUCH</h1>
             <ul className="contact-items-container">
               {contactItems.map((eachItem) => (
                 <ContactItems key={eachItem.id} contactItem={eachItem} />

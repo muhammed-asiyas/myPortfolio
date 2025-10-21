@@ -1,0 +1,67 @@
+.skill-item {
+  margin-right: 20px;
+  margin-top: 6px;
+  margin-bottom: 30px;
+  border-radius: 16px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 12px;
+  font-family: Lucida Handwriting;
+}
+
+@media screen and (max-width: 767px) {
+  .skill-item {
+    margin-right: 12px;
+    margin-top: 5px;
+    margin-bottom: 16px;
+    border-radius: 12px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 9px;
+  }
+}
+
+.dark-skill-item {
+  border: 2px solid azure;
+  background-color: transparent;
+  box-shadow: 0px 0px 8px 0px blueviolet;
+  color: white;
+  font-weight: 500;
+}
+
+.color-skill-item {
+  border: 2px solid azure;
+  background-color: rgb(207, 180, 227);
+  box-shadow: 0px 0px 4px 0px black;
+  color: rgb(20, 6, 34);
+  font-weight: 600;
+}
+.color-skill-item:hover {
+  border: 2px dashed azure;
+  box-shadow: 0px 0px 7px 0px black;
+  background-color: rgb(160, 82, 220);
+  font-size: 13px;
+}
+
+.dark-skill-item:hover {
+  border: 2px dashed azure;
+  box-shadow: 0px 0px 12px 0px blueviolet;
+  background-color: rgb(160, 82, 220);
+  font-size: 13px;
+  color: black;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 767px) {
+    .color-skill-item:hover {
+        font-size: 10px;
+    }
+    .dark-skill-item:hover {
+        font-size: 10px;
+    }
+
+}

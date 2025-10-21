@@ -1,6 +1,7 @@
 .feature-item {
-    font-family: "Roboto";
-    font-size: 16px;
+    font-family: "San serif";
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .dark-feature-item {
@@ -8,5 +9,11 @@
 }
 
 .color-feature-item {
-    color: black;
+    color: rgb(55, 17, 91);
+}
+
+@media screen and (max-width: 767px) {
+    .feature-item {
+        font-size: 16px;
+    }
 }
