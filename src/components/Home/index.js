@@ -268,7 +268,7 @@ const Home = () => (
                   />
                 ))}
               </ul>
-              <Link to="/projects">
+              <Link to="/certificates">
                 <button
                   type="button"
                   className={`more-project-button ${ProjectButtonBackground}`}

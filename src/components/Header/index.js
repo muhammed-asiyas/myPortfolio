@@ -23,6 +23,11 @@ const navItemList = [
   },
   {
     id: 4,
+    item: "Certificates",
+    link: "/certificates",
+  },
+  {
+    id: 5,
     item: "Contact",
     link: "/contacts",
   },

@@ -148,7 +148,7 @@
 .navbar-container-menu-sm {
     display: flex;
     flex-direction: column;
-    height: 240px;
+    height: 265px;
     width: 100%;
     border: 1px solid black;
     box-shadow: 1px 1px 10px 3px black;
