@@ -22,6 +22,18 @@ const certificateList = [
     issueDate: "10 MAY 2025",
     link: "https://certificates.ccbp.in/intensive/javascript-essentials?id=XCRERSSCVD",
   },
+  {
+    id: 4,
+    name: "PYTHON",
+    issueDate: "12 MAY 2025",
+    link: "https://certificates.ccbp.in/intensive/programming-foundations?id=UONAAAJDBQ",
+  },
+  {
+    id: 5,
+    name: "GIT",
+    issueDate: "04 MAY 2025",
+    link: "https://certificates.ccbp.in/intensive/developer-foundations?id=HZCOAGMNUX",
+  },
 ];
 
 const MoreCertificates = () => {

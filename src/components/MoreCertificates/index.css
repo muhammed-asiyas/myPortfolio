@@ -48,3 +48,9 @@
   padding: 0px;
   list-style-type: none;
 }
+
+@media screen and (max-width: 767px) {
+  .other-certificates-sub-container {
+    justify-content: center;
+  }
+}
