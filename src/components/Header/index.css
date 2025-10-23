@@ -18,6 +18,7 @@
 .color-header-container {
     background-color: rgba(198, 161, 234, 0.961);
     box-shadow: 0px 0px 6px 2px black;
+    filter: contrast(11px);
 }
 
 .nav-head-lg {

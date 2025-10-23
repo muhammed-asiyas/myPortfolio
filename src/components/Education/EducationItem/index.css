@@ -1,0 +1,123 @@
+.education-item-details-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 10px;
+    padding: 14px;
+    width: 90%;
+    height: 230px;
+    margin: 12px;
+}
+
+@media screen and (max-width: 767px) {
+    .education-item-details-container {
+        flex-direction: column;
+        height: 330px;
+    }
+}
+
+.dark-education-item-details-container {
+    background-color: rgb(38, 11, 54);
+}
+
+.dark-education-item-details-container:hover {
+    background-color:rgb(64, 12, 76);
+    box-shadow: 0px 0px 2px 0px azure;
+    width: 91.5%;
+    border-radius: 14px;
+}
+
+.color-education-item-details-container {
+    box-shadow: 0px 0px 5px 0px rgb(30, 31, 30);
+}
+
+.color-education-item-details-container:hover {
+    box-shadow: 0px 0px 12px 0px rgb(30, 31, 30);
+    border-radius: 14px;
+    width: 90.5%;
+}
+
+.education-first-section-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;   
+}
+
+
+.eduaction-name {
+    font-family: Comic Sans Ms;
+    font-size: 24px;
+}
+
+.dark-education-name {
+  color: azure;
+  text-shadow: 5px 2px 6px rgb(10, 9, 9);
+}
+
+
+.color-education-name {
+    color: rgb(55, 17, 91);
+    text-shadow: 0px 1px 2px black;
+}
+
+.progress {
+    font-family: Rockwell;
+    font-size: 16px;
+}
+
+.dark-progress {
+  color: rgb(176, 187, 187);
+}
+.color-progress {
+    color: rgb(96, 32, 156);
+}
+
+.year {
+    font-family: Rockwell;
+    font-size: 16px;
+    margin: 0px;
+}
+
+.dark-year {
+    color: rgb(83, 88, 88);
+}
+
+.color-year {
+    color: rgb(78, 59, 96);
+}
+
+@media screen and (max-width: 767px) {
+    .education-first-section-container {
+        width: 90%;
+    }
+
+    .eduaction-name {
+        font-size: 20px;
+    }
+
+    .progress {
+        font-size: 12px;
+    }
+
+    .year {
+        font-size: 12px;
+    }
+}
+
+.education-picture {
+    width: 220px;
+    height: 170px;
+    border-radius: 20px;
+    margin-left: 60px;
+    border: 2px solid rgb(205, 205, 205);
+    box-shadow: 0px 0px 3px 0px rgb(4, 10, 10);
+}
+
+@media screen and (max-width: 767px) {
+    .education-picture {
+        width: 180px;
+        height: 140px;
+        margin-left: 0px;
+        margin-top: 14px;
+    }
+}

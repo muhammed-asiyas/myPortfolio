@@ -1,0 +1,50 @@
+.education-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.education-details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: aquamarine;
+  list-style-type: none;
+}
+
+@media screen and (max-width: 767px) {
+  .education-details-container {
+    width: 90%;
+  }
+}
+
+
+
+
+
+.dark-education-details-container {
+  background-image: linear-gradient(to top, rgb(0, 0, 0), rgb(16, 2, 28));
+  border-radius: 16px;
+  box-shadow: 0px 0px 3px 0px rgb(204, 55, 250);
+  border: 2px solid azure;
+}
+
+.color-education-details-container{
+  background-color: azure;
+  border-radius: 16px;
+  border: 2px solid rgb(241, 229, 241);
+}
+
+.dark-education-details-container:hover {
+  border: 2px dashed azure;
+}
+.color-education-details-container:hover {
+  border: 2px dashed rgb(125, 103, 146);
+}

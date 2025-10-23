@@ -13,8 +13,8 @@ const navItemList = [
   },
   {
     id: 2,
-    item: "Education",
-    link: "/education",
+    item: "Educations",
+    link: "/educations",
   },
   {
     id: 3,

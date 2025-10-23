@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import Home from "./components/Home";
 import MoreProjects from "./components/MoreProjects";
 import MoreCertificates from "./components/MoreCertificates";
+import Education from "./components/Education";
 import ThemeContext from "./context/ThemeContext";
 import "./App.css";
 
@@ -29,6 +30,7 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route exact path="/projects" component={MoreProjects} />
           <Route exact path="/certificates" component={MoreCertificates} />
+          <Route exact path="/educations" component={Education} />
         </Switch>
       </ThemeContext.Provider>
     );
