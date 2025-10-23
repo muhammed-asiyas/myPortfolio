@@ -39,10 +39,10 @@
 
 @media screen and (max-width: 767px) {
     .nav-head-lg {
-        font-size: 36px;
+        font-size: 28px;
     }
     .nav-head-lg:hover {
-        font-size: 30px;
+        font-size: 31px;
     }
 }
 

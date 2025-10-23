@@ -323,7 +323,7 @@
 }
 
 .head-item {
-  color: rgb(189, 189, 215);
+  color: rgb(191, 215, 189);
   font-family: Bahnschrift;
   font-weight: 600;
   font-size: 36px;
@@ -339,6 +339,15 @@
   font-size: 36px;
   margin: 0x;
   margin-top: 80px;
+}
+
+@media screen and (max-width: 767px) {
+  .head-item {
+    font-size: 30px;
+  }
+  .color-head-item {
+    font-size: 30px;
+  }
 }
 
 .technical-skill-container {
