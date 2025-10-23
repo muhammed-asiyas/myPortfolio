@@ -12,7 +12,7 @@
 @media screen and (max-width: 767px) {
     .education-item-details-container {
         flex-direction: column;
-        height: 330px;
+        height: 336px;
     }
 }
 
@@ -46,7 +46,7 @@
 
 .eduaction-name {
     font-family: Comic Sans Ms;
-    font-size: 24px;
+    font-size: 25px;
 }
 
 .dark-education-name {
@@ -62,7 +62,7 @@
 
 .progress {
     font-family: Rockwell;
-    font-size: 16px;
+    font-size: 19px;
 }
 
 .dark-progress {
@@ -74,7 +74,7 @@
 
 .year {
     font-family: Rockwell;
-    font-size: 16px;
+    font-size: 17px;
     margin: 0px;
 }
 
@@ -96,7 +96,7 @@
     }
 
     .progress {
-        font-size: 12px;
+        font-size: 15px;
     }
 
     .year {

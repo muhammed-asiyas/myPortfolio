@@ -18,6 +18,20 @@ const educationDetails = [
     year: "2019 - 2022",
     picture: 'https://res.cloudinary.com/dlhgbo0ji/image/upload/v1761207404/university-of-calicut-smapse4_j7lkd9.jpg'
   },
+  {
+    id: 3,
+    name: "PTMYHSS Edappalam, Palakkad",
+    progress: "Higher Secondary Examination Certificate (79%)",
+    year: "2017 - 2019",
+    picture: 'https://res.cloudinary.com/dlhgbo0ji/image/upload/v1761231911/OIP_tsozvo.webp'
+  },
+  {
+    id: 4,
+    name: "PTMYHSS Edappalam, Palakkad",
+    progress: "Secondary School Leaving Certificate (87%)",
+    year: "2016 - 2017",
+    picture: 'https://res.cloudinary.com/dlhgbo0ji/image/upload/v1761231911/OIP_tsozvo.webp'
+  },
 ];
 
 const Education = () => {
