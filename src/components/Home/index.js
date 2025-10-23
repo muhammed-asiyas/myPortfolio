@@ -194,7 +194,7 @@ const Home = () => (
               <div className={`image-sm-container ${ImageContainer}`}>
                 <img
                   className="image-sm"
-                  src="https://res.cloudinary.com/dlhgbo0ji/image/upload/v1759390148/asiyassss_mzqpn8.png"
+                  src="https://res.cloudinary.com/dlhgbo0ji/image/upload/v1761236287/IMG_5855.asiyas_p2zbjj.png"
                 />
               </div>
               <div>
