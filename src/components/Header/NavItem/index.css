@@ -64,6 +64,16 @@
   text-decoration: none;
 }
 
+.link-item-sm-color {
+  text-decoration: none;
+  color: rgb(47, 10, 81);
+}
+
+.link-item-sm-dark {
+  text-decoration: none;
+  color: rgb(157, 116, 194);
+}
+
 .nav-item-sm-item {
   list-style-type: none;
   margin: 6px;

@@ -51,6 +51,13 @@ class Header extends Component {
     });
   };
 
+
+  onClickActiveIdSm = (id) => {
+    this.setState({
+      isActiveId: id,
+    });
+  };
+
   renderNavBarInSmallDevice = () => {
     const { isClickMenu, isActiveId } = this.state;
     return isClickMenu ? (
@@ -92,8 +99,8 @@ class Header extends Component {
                 <NavItem
                   key={eachItem.id}
                   navItem={eachItem}
-                  onClickActiveId={this.onClickActiveId}
-                  isActive={eachItem.id === isActiveId}
+                  onClickActiveIdsm={this.onClickActiveIdSm}
+                  isActivesm={eachItem.id === isActiveId}
                 />
               ))}
             </nav>
