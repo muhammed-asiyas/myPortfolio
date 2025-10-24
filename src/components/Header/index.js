@@ -36,6 +36,7 @@ const navItemList = [
 class Header extends Component {
   state = {
     isClickMenu: false,
+    isActiveId: "",
   };
 
   onClickMenuBar = () => {
@@ -44,8 +45,14 @@ class Header extends Component {
     }));
   };
 
+  onClickActiveId = (id) => {
+    this.setState({
+      isActiveId: id,
+    });
+  };
+
   renderNavBarInSmallDevice = () => {
-    const { isClickMenu } = this.state;
+    const { isClickMenu, isActiveId } = this.state;
     return isClickMenu ? (
       <ThemeContext.Consumer>
         {(value) => {
@@ -82,7 +89,12 @@ class Header extends Component {
                 <img className="theme-icon" src={themeIcon} />
               </button>
               {navItemList.map((eachItem) => (
-                <NavItem key={eachItem.id} navItem={eachItem} />
+                <NavItem
+                  key={eachItem.id}
+                  navItem={eachItem}
+                  onClickActiveId={this.onClickActiveId}
+                  isActive={eachItem.id === isActiveId}
+                />
               ))}
             </nav>
           );
@@ -121,6 +133,7 @@ class Header extends Component {
   };
 
   render() {
+    const { isActiveId } = this.state;
     return (
       <ThemeContext.Consumer>
         {(value) => {
@@ -158,7 +171,12 @@ class Header extends Component {
                     <img className="theme-icon" src={themeIcon} />
                   </ToggelButton>
                   {navItemList.map((eachItem) => (
-                    <NavItem key={eachItem.id} navItem={eachItem} />
+                    <NavItem
+                      key={eachItem.id}
+                      navItem={eachItem}
+                      onClickActiveId={this.onClickActiveId}
+                      isActive={eachItem.id === isActiveId}
+                    />
                   ))}
                 </nav>
               </div>

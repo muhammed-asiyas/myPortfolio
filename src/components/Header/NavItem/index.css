@@ -13,6 +13,12 @@
   color: azure;
 }
 
+.active-lg-nav-button-color {
+  color: azure;
+  font-family: Bahnschrift;
+  text-shadow: 1px 1px 2px black;
+}
+
 .dark-nav-item-lg {
   font-family: Bahnschrift;
   font-size: 19px;
@@ -26,27 +32,26 @@
   color: rgb(123, 105, 192);
 }
 
-.color-nav-item-sm {
+.active-lg-nav-button-dark {
+  color: rgb(123, 105, 192);
+  text-shadow: 1px 1px 2px black;
   font-family: Bahnschrift;
-  font-size: 17px;
-  cursor: pointer;
-  font-weight: 500;
-  color: rgb(27, 4, 61);
-  margin: 0px;
 }
 
-.color-nav-item-sm:hover {
-  color: rgb(255, 255, 255);
-  text-shadow: 1px 1px 2px black;
+.active-sm-nav-button-dark {
+  color: azure;
+  font-family: Bahnschrift;
+  text-shadow: 1px 1px 2px rgb(253, 254, 253);
   font-weight: 600;
 }
+
 
 .light-nav-item-sm {
   font-family: Bahnschrift;
   font-size: 17px;
   cursor: pointer;
   font-weight: 400;
-  color: #eee6f4;
+  color: #e6f4ec;
   margin: 0px;
 }
 
