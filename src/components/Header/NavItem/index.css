@@ -9,9 +9,7 @@
   margin: 0px;
 }
 
-.color-nav-item-lg:hover {
-  color: azure;
-}
+
 
 .active-lg-nav-button-color {
   color: azure;
@@ -28,9 +26,6 @@
   margin: 0px;
 }
 
-.dark-nav-item-lg:hover {
-  color: rgb(123, 105, 192);
-}
 
 .active-lg-nav-button-dark {
   color: rgb(123, 105, 192);
@@ -55,10 +50,7 @@
   margin: 0px;
 }
 
-.light-nav-item-sm:hover {
-  color: blueviolet;
-  font-weight: 600;
-}
+
 
 .link-item {
   text-decoration: none;
