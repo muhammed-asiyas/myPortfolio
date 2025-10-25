@@ -1,0 +1,134 @@
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  width: 100%;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  padding: 20px;
+  border-radius: 12px;
+  list-style-type: none;
+}
+
+.dark-form-container {
+  background-image: linear-gradient(to top, rgb(0, 0, 0), rgb(16, 2, 28));
+  border-radius: 16px;
+  box-shadow: 0px 0px 3px 0px rgb(204, 55, 250);
+  border: 2px solid azure;
+}
+
+.color-form-container {
+  background-color: azure;
+  border-radius: 16px;
+  border: 2px solid rgb(241, 229, 241);
+}
+
+.dark-form-container:hover {
+  border: 2px dashed azure;
+}
+.color-form-container:hover {
+  border: 2px dashed rgb(125, 103, 146);
+}
+
+.input-field {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  border-radius: 16px;
+  padding: 16px;
+  border: none;
+  margin: 10px;
+  outline: none;
+  opacity: 10px;
+}
+
+.color-input-field {
+  background-color: rgb(232, 240, 230);
+  color: rgb(56, 43, 67);
+  font-weight: 400;
+}
+
+.dark-input-field {
+  background-color: rgb(33, 8, 49);
+  color: rgb(182, 187, 187);
+}
+
+.color-input-field::placeholder {
+  color: rgb(170, 170, 172);
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "Roboto";
+}
+
+.dark-input-field::placeholder {
+  color: rgb(78, 78, 86);
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "Roboto";
+}
+
+.color-input-field:hover {
+  box-shadow: 0px 0px 4px 0px rgb(216, 162, 162);
+}
+.dark-input-field:hover {
+  box-shadow: 0px 0px 4px 0px rgb(110, 106, 106);
+}
+
+.submit-form {
+  cursor: pointer;
+  border-radius: 16px;
+  font-family: Bahnschrift;
+  width: 200px;
+  height: 40px;
+  margin: 10px;
+  font-size: 18px;
+}
+.color-submit-form {
+  border: 1px solid rgb(173, 150, 150);
+  box-shadow: 0px 0px 3px 0px rgb(214, 149, 149);
+  color: rgb(160, 129, 169);
+  background-color: rgb(232, 240, 230);
+}
+
+.dark-submit-form {
+  border: 1px solid rgb(77, 84, 84);
+  box-shadow: 0px 0px 3px 0px rgb(214, 149, 149);
+  color: rgb(79, 47, 88);
+  background-color: rgb(36, 9, 54);
+}
+
+.color-submit-form:hover {
+  background-color: rgb(188, 142, 231);
+  color: azure;
+  border: 1px solid azure;
+  box-shadow: 0px 0px 3px 0px rgb(7, 7, 7);
+}
+
+.dark-submit-form:hover {
+  background-color: rgb(55, 14, 82);
+  color: rgb(140, 85, 155);
+  border: 1px solid rgb(202, 215, 215);
+  box-shadow: 0px 0px 3px 0px rgb(7, 7, 7);
+}
+
+@media screen and (max-width: 767px) {
+  .form-container {
+    width: 92%;
+  }
+  .input-field {
+    width: 100%;
+  }
+  .submit-form {
+    width: 140px;
+    height: 34px;
+    margin: 10px;
+    font-size: 12px;
+  }
+}
