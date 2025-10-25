@@ -9,6 +9,10 @@
   margin: 0px;
 }
 
+.color-nav-item-lg:hover {
+  color: azure;
+}
+
 
 
 .active-lg-nav-button-color {
@@ -24,6 +28,10 @@
   font-weight: 700;
   color: #ffffff;
   margin: 0px;
+}
+
+.dark-nav-item-lg:hover {
+  color: blueviolet;
 }
 
 
@@ -50,6 +58,9 @@
   margin: 0px;
 }
 
+.light-nav-item-sm:hover {
+  color: blueviolet;
+}
 
 
 .link-item {
@@ -61,9 +72,16 @@
   color: rgb(47, 10, 81);
 }
 
+.link-item-sm-color:hover {
+  color: azure;
+}
+
 .link-item-sm-dark {
   text-decoration: none;
-  color: rgb(157, 116, 194);
+  color: rgb(111, 82, 136);
+}
+.link-item-sm-dark:hover {
+  color: azure;
 }
 
 .nav-item-sm-item {
