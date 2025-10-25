@@ -36,16 +36,27 @@
   box-shadow: 0px 0px 6px 0px azure;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .dark-certificate-item-box {
+    width: 42%;
+    height: 175px;
+  }
+  .color-certificate-item-box {
+    width: 42%;
+    height: 175px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .dark-certificate-item-box {
     width: 65%;
-    height: 130px;
+    height: 150px;
     
   }
 
   .color-certificate-item-box {
     width: 65%;
-    height: 130px;
+    height: 150px;
   }
 }
 
@@ -125,10 +136,10 @@
 
 @media screen and (max-width: 767px) {
   .certificate-item-name {
-    font-size: 14px;
+    font-size: 16px;
   }
   .issue-date {
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .color-view-certificate {

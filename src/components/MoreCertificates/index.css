@@ -61,6 +61,12 @@
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+  .other-certificates-container {
+    width: 92%;
+  }
+}
+
 .other-certificates-sub-container {
   display: flex;
   align-items: center;

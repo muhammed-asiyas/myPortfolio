@@ -154,7 +154,7 @@
 
 .my-image {
   width: 320px;
-  transition: 3s;
+  transition: 2s;
 }
 
 @media screen and (min-width: 901px) {
@@ -453,7 +453,7 @@
   align-items: center;
   justify-content: space-evenly;
   width: 80%;
-  height: 350px;
+  height: 430px;
   flex-wrap: wrap;
   background-color: azure;
   border-radius: 16px;
