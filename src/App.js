@@ -11,6 +11,7 @@ import "./App.css";
 class App extends Component {
   state = {
     isDark: false,
+    isActiveNav: '',
   };
 
   onChangeTheme = () => {
@@ -18,13 +19,21 @@ class App extends Component {
       isDark: !prevState.isDark,
     }));
   };
+
+  onChangeNavId = id => {
+    this.setState({
+      isActiveNav: id
+    })
+  }
   render() {
-    const { isDark } = this.state;
+    const { isDark, isActiveNav} = this.state;
     return (
       <ThemeContext.Provider
         value={{
           isDark,
           toggleTheme: this.onChangeTheme,
+          isActiveNav,
+          onClickNav: this.onChangeNavId,
         }}
       >
         <Switch>

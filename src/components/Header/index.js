@@ -36,7 +36,6 @@ const navItemList = [
 class Header extends Component {
   state = {
     isClickMenu: false,
-    isActiveId: "",
   };
 
   onClickMenuBar = () => {
@@ -45,21 +44,9 @@ class Header extends Component {
     }));
   };
 
-  onClickActiveId = (id) => {
-    this.setState({
-      isActiveId: id,
-    });
-  };
-
-
-  onClickActiveIdSm = (id) => {
-    this.setState({
-      isActiveId: id,
-    });
-  };
 
   renderNavBarInSmallDevice = () => {
-    const { isClickMenu, isActiveId } = this.state;
+    const { isClickMenu} = this.state;
     return isClickMenu ? (
       <ThemeContext.Consumer>
         {(value) => {
@@ -99,8 +86,6 @@ class Header extends Component {
                 <NavItem
                   key={eachItem.id}
                   navItem={eachItem}
-                  onClickActiveIdsm={this.onClickActiveIdSm}
-                  isActivesm={eachItem.id === isActiveId}
                 />
               ))}
             </nav>
@@ -140,7 +125,6 @@ class Header extends Component {
   };
 
   render() {
-    const { isActiveId } = this.state;
     return (
       <ThemeContext.Consumer>
         {(value) => {
@@ -181,8 +165,6 @@ class Header extends Component {
                     <NavItem
                       key={eachItem.id}
                       navItem={eachItem}
-                      onClickActiveId={this.onClickActiveId}
-                      isActive={eachItem.id === isActiveId}
                     />
                   ))}
                 </nav>
