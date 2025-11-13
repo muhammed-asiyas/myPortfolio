@@ -21,7 +21,7 @@ const EducationItem = (props) => {
               <p className={`year ${YearStyle}`}>{year}</p>
             </div>
             <div>
-              <img className="education-picture" src={picture} />
+              <img className="education-picture" src={picture} alt={name} />
             </div>
           </li>
         );
