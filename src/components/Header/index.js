@@ -72,6 +72,7 @@ class Header extends Component {
                   <img
                     className="nav-hamburger-image"
                     src="https://res.cloudinary.com/dlhgbo0ji/image/upload/v1759769783/close_d8qtko.png"
+                    alt="nav hamburger"
                   />
                 </button>
               </div>
@@ -80,7 +81,7 @@ class Header extends Component {
                 className={`toggle-theme-button-sm ${ButtonColor}`}
                 onClick={onChangeTheme}
               >
-                <img className="theme-icon" src={themeIcon} />
+                <img className="theme-icon" src={themeIcon} alt="themeicon" />
               </button>
               {navItemList.map((eachItem) => (
                 <NavItem
@@ -115,6 +116,7 @@ class Header extends Component {
                 <img
                   className="nav-hamburger-image"
                   src="https://res.cloudinary.com/dlhgbo0ji/image/upload/v1759769410/more_dmhynq.png"
+                  alt="nav hamburger"
                 />
               </button>
             </nav>
@@ -159,7 +161,7 @@ class Header extends Component {
                     type="button"
                     onClick={onChangeTheme}
                   >
-                    <img className="theme-icon" src={themeIcon} />
+                    <img className="theme-icon" src={themeIcon} alt="theme icon" />
                   </ToggelButton>
                   {navItemList.map((eachItem) => (
                     <NavItem

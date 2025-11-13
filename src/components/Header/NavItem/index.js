@@ -13,9 +13,6 @@ const NavItem = (props) => {
           onClickNav(id);
         };
         const isActive = isActiveNav === id
-        const navItemSmColor = isDark
-          ? "light-nav-item-sm"
-          : "color-nav-item-sm";
         const navItemLg = isDark ? "dark-nav-item-lg" : "color-nav-item-lg";
         const IsActiveButtonColor = isActive
           ? "active-lg-nav-button-color"

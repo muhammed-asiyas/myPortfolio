@@ -3,7 +3,7 @@ import ThemeContext from "../../../context/ThemeContext";
 
 const TechnicalSkills = (props) => {
   const { skillsItem } = props;
-  const { id, icon, name } = skillsItem;
+  const {icon, name } = skillsItem;
   return (
     <ThemeContext.Consumer>
       {(value) => {
@@ -12,7 +12,7 @@ const TechnicalSkills = (props) => {
         const SkillItemColor = isDark ? 'dark-skill-item-name' : 'color-skill-item-name'
         return (
           <li className={`skill-item-container ${SkillBackground}`}>
-            <img className="skill-icon" src={icon} />
+            <img className="skill-icon" src={icon} alt={name} />
             <p className={`skill-item-name ${SkillItemColor}`}>{name}</p>
           </li>
         );

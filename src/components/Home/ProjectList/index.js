@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import "./index.css";
 import FeaturesList from "./FeaturesList";
 import ThemeContext from "../../../context/ThemeContext";
