@@ -185,7 +185,10 @@ const Home = () => (
       const ProjectButtonBackground = isDark
         ? "dark-more-project-button"
         : "color-more-project-button";
-      const certificateBackground = isDark ? 'dark-certificate-item-container' : 'color-certificate-item-container'
+      const certificateBackground = isDark
+        ? "dark-certificate-item-container"
+        : "color-certificate-item-container";
+      const DownloadBtn = isDark ? "dark-download-btn" : "light-download-btn";
       return (
         <div className={`home-container ${HomeContainerBackground}`}>
           <Header />
@@ -227,6 +230,11 @@ const Home = () => (
                 />
               </div>
             </div>
+            <a href="https://drive.google.com/file/d/15JUFq_VwpPuyLyGwa37QLIBhaNvSyDiR/view?usp=sharing">
+              <button className={`download-btn ${DownloadBtn}`}>
+                DOWNLOAD CV
+              </button>
+            </a>
           </div>
           <div
             className={`skills-container ${SkillsContainerBackground}`}

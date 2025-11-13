@@ -474,7 +474,7 @@
   align-items: center;
   justify-content: space-evenly;
   width: 80%;
-  height: 350px;
+  height: 430px;
   flex-wrap: wrap;
   background-image: linear-gradient(to top, rgb(0, 0, 0), rgb(16, 2, 28));
   border-radius: 16px;
@@ -541,4 +541,50 @@
   .contact-items-container {
     width: 80%;
   }
+}
+
+.download-btn {
+  text-align: center;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: Bahnschrift;
+  cursor: pointer;
+  width: 120px;
+  height: 36px;
+  margin-top: 20px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 767px) {
+  .download-btn {
+    font-size: 12px;
+    width: 100px;
+    height: 32px;
+    margin-top: 14px;
+    font-weight: 600;
+  }
+}
+
+.dark-download-btn {
+  background-color: rgb(19, 4, 34);
+  color: azure;
+  border: 1px solid azure;
+}
+
+.dark-download-btn:hover {
+  background-color: rgb(39, 8, 67);
+  border: 1px dashed azure;
+  font-weight: 700;
+}
+
+.light-download-btn {
+  background-color: rgb(198, 171, 223);
+  color: rgb(28, 7, 48);
+  border: 1px solid black;
+}
+
+.light-download-btn:hover {
+  background-color: rgb(246, 245, 247);
+  border: 1px dashed black;
+  font-weight: 700;
 }
