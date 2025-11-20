@@ -8,19 +8,27 @@ const projectList = [
     id: 1,
     title: "Nxt Watch (YouTube Clone)",
     description:
-      "Rolled out an innovative e-commerce platform patterned after Amazon and Flipkart.",
+      "Implemented Nxt Watch application which is a clone for YouTube where users can log in and can see a list of videos like Trending, Gaming, Saved videos, and also can search videos and view specific video details, and users can toggle the theme (Light/Dark).",
     features: [
       {
         id: "B1",
-        feature: "This project is like YouTube.",
+        feature: "Implemented Different pages like Login, Home, Trending, Gaming, Saved videos using React components, props, state, lists, event handlers, form inputs."
       },
       {
         id: "B2",
-        feature: "This is my first project using more functions in React js",
+        feature: "Authenticating by taking username, password and doing login post HTTP API Call.",
       },
       {
         id: "B3",
-        feature: "This project used vercel deployment for the deploy",
+        feature: "Persisted user login state by keeping jwt token in local storage, Sending it in headers of further API calls to authorize the user."
+      },
+      {
+        id: "B4",
+        feature: "Implemented different routes for Login, Home, Trending, Gaming, Saved videos, Video item details pages by using React Router components Route, Switch, Link."
+      },
+      {
+        id: "B5",
+        feature: "Redirecting to the login page if the user tries to open Home, Trending, Gaming, Saved videos, Video item details routes which need authentication by implementing protected Route."
       },
     ],
     skills: [
@@ -38,7 +46,7 @@ const projectList = [
       },
       {
         id: "B4",
-        skill: "AUTHORIZATION",
+        skill: "JAVA SCRIPT",
       },
       {
         id: "B5",
@@ -46,35 +54,37 @@ const projectList = [
       },
       {
         id: "B6",
-        skill: "AUTHENTICATION",
+        skill: "ROUTING",
       },
       {
         id: "B7",
         skill: "REST API CALLS",
       },
+      {id: 'B8', skill: 'AUTHENTICATION'},
+      {id: 'B9', skill: 'AUTHORIZATION'},
     ],
-    projectLink: "https://nxt-watch-sxm2.vercel.app/",
+    projectLink: "https://nxt-watch-sxm2-muhammed-asiyas-projects.vercel.app/",
     gitHub: 'https://github.com/muhammed-asiyas/NxtWatch'
   },
   {
     id: 2,
     title: "Tasty Kitchens (Swiggy/Zomato Clone)",
     description:
-      "Rolled out an innovative e-commerce platform patterned after Amazon and Flipkart.",
+      "Constructed an engaging Online Food Ordering Service akin to Swiggy/Zomato, enabling users to discover top restaurants, obtain in-depth restaurant details, manage their cart, and process payments.",
     features: [
       {
         id: "C1",
         feature:
-          "Tastey Designed pages for Login, Products, and Product details with React Router and React components.",
+          "Set up unique routes for features such as login, home screen, individual restaurant data, and cart management using React Router components (Route, Switch, Link).",
       },
       {
         id: "C2",
         feature:
-          "Tastey Ensured user security through JWT tokens, REST API calls, and local storage.",
+          "Incorporated a fluid horizontal scrolling capability (carousel images) on the home screen with the help of the React Slick library.",
       },
       {
         id: "C3",
-        feature: "This project used vercel deployment for the deploy",
+        feature: "Developed visually striking and exact React components by following Figma mockups and using REST APIs to fetch popular restaurants and specific restaurant information."
       },
     ],
     skills: [
@@ -92,7 +102,7 @@ const projectList = [
       },
       {
         id: "B4",
-        skill: "AUTHORIZATION",
+        skill: "JAVA SCRIPT",
       },
       {
         id: "B5",
@@ -100,14 +110,22 @@ const projectList = [
       },
       {
         id: "B6",
-        skill: "AUTHENTICATION",
+        skill: "REST API CALLS",
       },
       {
         id: "B7",
-        skill: "REST API CALLS",
+        skill: "AUTHENTICATION",
+      },
+      {
+        id: "B8",
+        skill: "AUTHORIZATION",
+      },
+      {
+        id: "B9",
+        skill: "REACT SLICK",
       },
     ],
-    projectLink: "https://tastey-kitchens-te6j.vercel.app/",
+    projectLink: "https://asiyas-tastey-kitchens.vercel.app/",
     gitHub: "https://github.com/muhammed-asiyas/Tastey-Kitchens"
   },
 ];
