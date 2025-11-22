@@ -240,7 +240,7 @@ const Home = () => (
                 />
               </div>
             </div>
-            <a href="https://drive.google.com/file/d/15JUFq_VwpPuyLyGwa37QLIBhaNvSyDiR/view?usp=sharing">
+            <a href="https://drive.google.com/file/d/1GBJGNiJseHqcZhG2nzFDXag0eK9UzDnJ/view?usp=sharing">
               <button className={`download-btn ${DownloadBtn}`}>
                 DOWNLOAD CV
               </button>
