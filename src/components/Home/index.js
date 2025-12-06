@@ -31,7 +31,7 @@ const skillsArray = [
   {
     id: 5,
     icon: "https://res.cloudinary.com/dlhgbo0ji/image/upload/v1759420929/database_ymjm0r.png",
-    name: "MySQL",
+    name: "SQLite",
   },
   {
     id: 6,
@@ -50,8 +50,18 @@ const skillsArray = [
   },
   {
     id: 9,
+    icon: "https://res.cloudinary.com/dlhgbo0ji/image/upload/v1765001783/Next.js_cayujl.png",
+    name: "Nxt JS",
+  },
+  {
+    id: 10,
     icon: "https://res.cloudinary.com/dlhgbo0ji/image/upload/v1759421211/programing_ingxu5.png",
     name: "Node JS",
+  },
+  {
+    id: 11,
+    icon: "https://res.cloudinary.com/dlhgbo0ji/image/upload/v1765001789/MongoDB_zvuuyr.png",
+    name: "MongoDB",
   },
 ];
 
@@ -240,7 +250,7 @@ const Home = () => (
                 />
               </div>
             </div>
-            <a href="https://drive.google.com/file/d/1GBJGNiJseHqcZhG2nzFDXag0eK9UzDnJ/view?usp=sharing">
+            <a href="https://drive.google.com/file/d/15JUFq_VwpPuyLyGwa37QLIBhaNvSyDiR/view?usp=sharing">
               <button className={`download-btn ${DownloadBtn}`}>
                 DOWNLOAD CV
               </button>
