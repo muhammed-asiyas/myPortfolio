@@ -83,7 +83,8 @@ const MoreCertificates = () => {
             <div
               className={`more-certificate-container ${CertificateContainerBackground}`}
             >
-              <h1 className={`${HeadColor}`}>CERTIFICATES</h1>
+              <h1 className={`${HeadColor}`}>IRC CERTIFICATE</h1>
+              <img className="ir-certificate" src="https://res.cloudinary.com/dlhgbo0ji/image/upload/v1765175946/Screenshot_2025-12-08_113625_l1ujln.png" />
               <div className={`other-certificates-container ${OtherCertificateBoxBackground}`}>
                 <h1 className={`other-certificate-name ${OtherCertificateName}`}>Other Certificates:-</h1>
                 <ul className="other-certificates-sub-container">
