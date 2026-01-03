@@ -128,6 +128,60 @@ const projectList = [
     projectLink: "https://asiyas-tastey-kitchens.vercel.app/",
     gitHub: "https://github.com/muhammed-asiyas/Tastey-Kitchens"
   },
+  {
+    id: 3,
+    title: "Todo Application",
+    description:
+      "A simple and efficient Todo Application built using React that allows users to create, edit, delete, and manage daily tasks.",
+    features: [
+      {
+        id: "D1",
+        feature:
+          "Add, edit, and delete tasks",
+      },
+      {
+        id: "D2",
+        feature:
+          "User can filter tasks by status (All / Completed / Pending)",
+      },
+      {
+        id: "D3",
+        feature: "Clean and responsive UI (mobile-friendly design) and Optimized for performance and smooth UX"
+      },
+    ],
+    skills: [
+      {
+        id: "B1",
+        skill: "HTML",
+      },
+      {
+        id: "B2",
+        skill: "CSS",
+      },
+      {
+        id: "B3",
+        skill: "REACT JS",
+      },
+      {
+        id: "B4",
+        skill: "JAVA SCRIPT",
+      },
+      {
+        id: "B5",
+        skill: "NODE JS",
+      },
+      {
+        id: "B6",
+        skill: "EXPRESS",
+      },
+      {
+        id: "B7",
+        skill: "SQLITE",
+      },
+    ],
+    projectLink: "https://todoapplicationfullstack.onrender.com/",
+    gitHub: "https://github.com/muhammed-asiyas/TodoApplicationBackend"
+  },
 ];
 
 const MoreProjects = () => {

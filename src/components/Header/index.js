@@ -168,6 +168,7 @@ class Header extends Component {
                       key={eachItem.id}
                       navItem={eachItem}
                     />
+                    
                   ))}
                 </nav>
               </div>
