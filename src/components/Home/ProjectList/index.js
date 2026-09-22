@@ -1,10 +1,10 @@
 import "./index.css";
-import FeaturesList from "./FeaturesList";
+
 import ThemeContext from "../../../context/ThemeContext";
 
 const ProjectList = (props) => {
   const { projectList } = props;
-  const { title, description, projectLink } = projectList;
+  const { title, projectImage, description, projectLink } = projectList;
   return (
     <ThemeContext.Consumer>
       {(value) => {
@@ -16,12 +16,8 @@ const ProjectList = (props) => {
         return (
           <li className={`project-list-item ${ProjectListBackground}`}>
             <h1 className={`project-name ${ProjectNameColor}`}>{title}</h1>
+            <img className="project-image" src={projectImage} alt={title} />
             <p className={`${DescriptionColor}`}>{description}</p>
-            <ul>
-              {projectList.features.map((eachItem) => (
-                <FeaturesList key={eachItem.id} featuresItem={eachItem} />
-              ))}
-            </ul>
             <a href={projectLink}>
               <button type="button" className={`a-tag-button ${VisitButtonTheme}`}>
                 Visit Project

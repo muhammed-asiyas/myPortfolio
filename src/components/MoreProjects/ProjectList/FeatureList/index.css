@@ -10,3 +10,11 @@
         font-size: 14px;
     }
 }
+
+.dark-feature-item {
+    color: azure;
+}
+
+.color-feature-item {
+    color: rgb(37, 7, 65);
+}

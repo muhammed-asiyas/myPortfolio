@@ -69,53 +69,17 @@ const projectList = [
   {
     id: 1,
     title: "Nxt Watch (YouTube Clone)",
+    projectImage: "https://res.cloudinary.com/dlhgbo0ji/image/upload/v1767687714/Screenshot_2026-01-06_135001_chjgnl.png",
     description:
       "Implemented Nxt Watch application which is a clone for YouTube where users can log in and can see a list of videos like Trending, Gaming, Saved videos, and also can search videos and view specific video details, and users can toggle the theme (Light/Dark).",
-    features: [
-      {
-        id: "B1",
-        feature: "Implemented Different pages like Login, Home, Trending, Gaming, Saved videos using React components, props, state, lists, event handlers, form inputs."
-      },
-      {
-        id: "B2",
-        feature: "Authenticating by taking username, password and doing login post HTTP API Call.",
-      },
-      {
-        id: "B3",
-        feature: "Persisted user login state by keeping jwt token in local storage, Sending it in headers of further API calls to authorize the user."
-      },
-      {
-        id: "B4",
-        feature: "Implemented different routes for Login, Home, Trending, Gaming, Saved videos, Video item details pages by using React Router components Route, Switch, Link."
-      },
-      {
-        id: "B5",
-        feature: "Redirecting to the login page if the user tries to open Home, Trending, Gaming, Saved videos, Video item details routes which need authentication by implementing protected Route."
-      },
-    ],
     projectLink: "https://nxt-watch-sxm2-muhammed-asiyas-projects.vercel.app/",
   },
   {
     id: 2,
     title: "Tasty Kitchens (Swiggy/Zomato Clone)",
+    projectImage: "https://res.cloudinary.com/dlhgbo0ji/image/upload/v1767686807/Screenshot_2026-01-06_131206_yq5qb4.png",
     description:
       "Constructed an engaging Online Food Ordering Service akin to Swiggy/Zomato, enabling users to discover top restaurants, obtain in-depth restaurant details, manage their cart, and process payments.",
-    features: [
-      {
-        id: "C1",
-        feature:
-          "Set up unique routes for features such as login, home screen, individual restaurant data, and cart management using React Router components (Route, Switch, Link).",
-      },
-      {
-        id: "C2",
-        feature:
-          "Incorporated a fluid horizontal scrolling capability (carousel images) on the home screen with the help of the React Slick library.",
-      },
-      {
-        id: "C3",
-        feature: "Developed visually striking and exact React components by following Figma mockups and using REST APIs to fetch popular restaurants and specific restaurant information."
-      },
-    ],
     projectLink: "https://asiyas-tastey-kitchens.vercel.app/",
   },
 ];
