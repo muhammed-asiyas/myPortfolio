@@ -1,7 +1,8 @@
-import "./index.css";
+import React from "react";
 import Header from "../Header";
 import ProjectList from "./ProjectList";
 import ThemeContext from "../../context/ThemeContext";
+import { FolderGit2 } from "lucide-react";
 
 const projectList = [
   {
@@ -32,39 +33,18 @@ const projectList = [
       },
     ],
     skills: [
-      {
-        id: "B1",
-        skill: "HTML",
-      },
-      {
-        id: "B2",
-        skill: "CSS",
-      },
-      {
-        id: "B3",
-        skill: "REACT JS",
-      },
-      {
-        id: "B4",
-        skill: "JAVA SCRIPT",
-      },
-      {
-        id: "B5",
-        skill: "JWT TOKEN",
-      },
-      {
-        id: "B6",
-        skill: "ROUTING",
-      },
-      {
-        id: "B7",
-        skill: "REST API CALLS",
-      },
-      {id: 'B8', skill: 'AUTHENTICATION'},
-      {id: 'B9', skill: 'AUTHORIZATION'},
+      { id: "B1", skill: "HTML" },
+      { id: "B2", skill: "CSS" },
+      { id: "B3", skill: "REACT JS" },
+      { id: "B4", skill: "JAVA SCRIPT" },
+      { id: "B5", skill: "JWT TOKEN" },
+      { id: "B6", skill: "ROUTING" },
+      { id: "B7", skill: "REST API CALLS" },
+      { id: "B8", skill: "AUTHENTICATION" },
+      { id: "B9", skill: "AUTHORIZATION" },
     ],
     projectLink: "https://nxt-watch-sxm2-muhammed-asiyas-projects.vercel.app/",
-    gitHub: 'https://github.com/muhammed-asiyas/NxtWatch'
+    gitHub: "https://github.com/muhammed-asiyas/NxtWatch"
   },
   {
     id: 2,
@@ -88,42 +68,15 @@ const projectList = [
       },
     ],
     skills: [
-      {
-        id: "B1",
-        skill: "HTML",
-      },
-      {
-        id: "B2",
-        skill: "CSS",
-      },
-      {
-        id: "B3",
-        skill: "REACT JS",
-      },
-      {
-        id: "B4",
-        skill: "JAVA SCRIPT",
-      },
-      {
-        id: "B5",
-        skill: "JWT TOKEN",
-      },
-      {
-        id: "B6",
-        skill: "REST API CALLS",
-      },
-      {
-        id: "B7",
-        skill: "AUTHENTICATION",
-      },
-      {
-        id: "B8",
-        skill: "AUTHORIZATION",
-      },
-      {
-        id: "B9",
-        skill: "REACT SLICK",
-      },
+      { id: "B1", skill: "HTML" },
+      { id: "B2", skill: "CSS" },
+      { id: "B3", skill: "REACT JS" },
+      { id: "B4", skill: "JAVA SCRIPT" },
+      { id: "B5", skill: "JWT TOKEN" },
+      { id: "B6", skill: "REST API CALLS" },
+      { id: "B7", skill: "AUTHENTICATION" },
+      { id: "B8", skill: "AUTHORIZATION" },
+      { id: "B9", skill: "REACT SLICK" },
     ],
     projectLink: "https://asiyas-tastey-kitchens.vercel.app/",
     gitHub: "https://github.com/muhammed-asiyas/Tastey-Kitchens"
@@ -136,13 +89,11 @@ const projectList = [
     features: [
       {
         id: "D1",
-        feature:
-          "Add, edit, and delete tasks",
+        feature: "Add, edit, and delete tasks",
       },
       {
         id: "D2",
-        feature:
-          "User can filter tasks by status (All / Completed / Pending)",
+        feature: "User can filter tasks by status (All / Completed / Pending)",
       },
       {
         id: "D3",
@@ -150,34 +101,13 @@ const projectList = [
       },
     ],
     skills: [
-      {
-        id: "B1",
-        skill: "HTML",
-      },
-      {
-        id: "B2",
-        skill: "CSS",
-      },
-      {
-        id: "B3",
-        skill: "REACT JS",
-      },
-      {
-        id: "B4",
-        skill: "JAVA SCRIPT",
-      },
-      {
-        id: "B5",
-        skill: "NODE JS",
-      },
-      {
-        id: "B6",
-        skill: "EXPRESS",
-      },
-      {
-        id: "B7",
-        skill: "SQLITE",
-      },
+      { id: "B1", skill: "HTML" },
+      { id: "B2", skill: "CSS" },
+      { id: "B3", skill: "REACT JS" },
+      { id: "B4", skill: "JAVA SCRIPT" },
+      { id: "B5", skill: "NODE JS" },
+      { id: "B6", skill: "EXPRESS" },
+      { id: "B7", skill: "SQLITE" },
     ],
     projectLink: "https://todoapplicationfullstack.onrender.com/",
     gitHub: "https://github.com/muhammed-asiyas/TodoApplicationBackend"
@@ -189,20 +119,50 @@ const MoreProjects = () => {
     <ThemeContext.Consumer>
       {(value) => {
         const { isDark } = value;
-        const HeadColor = isDark ? "head-itemm" : 'color-head-itemm'
-        const ProjectContainerBackground = isDark ? 'dark-project-container' : 'color-project-container'
+
         return (
-          <>
+          <div className="w-full flex flex-col min-h-screen">
             <Header />
-            <div className={`more-project-container ${ProjectContainerBackground}`}>
-              <h1 className={HeadColor}>PROJECTS</h1>
-              <ul className="more-project-list-container">
-                {projectList.map(eachProject => (
-                  <ProjectList key={eachProject.id} projectList={eachProject} />
-                ))}
-              </ul>
-            </div>
-          </>
+
+            <main className="flex-grow py-12 sm:py-16">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                {/* Header Title */}
+                <div className="text-center max-w-2xl mx-auto mb-14">
+                  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold mb-3 border bg-indigo-500/10 border-indigo-500/20 text-indigo-600 dark:text-indigo-400">
+                    <FolderGit2 size={15} />
+                    <span>Selected Works</span>
+                  </div>
+                  <h1 className="text-3xl sm:text-5xl font-black tracking-tight">
+                    FEATURED PROJECTS
+                  </h1>
+                  <p
+                    className={`mt-3 text-sm sm:text-base ${
+                      isDark ? "text-slate-400" : "text-slate-600"
+                    }`}
+                  >
+                    Deep dive into each project's architectural features, state management, REST API workflows, and technical stack.
+                  </p>
+                </div>
+
+                {/* Projects List */}
+                <ul className="space-y-8 list-none p-0 m-0 max-w-5xl mx-auto">
+                  {projectList.map((eachProject) => (
+                    <ProjectList key={eachProject.id} projectList={eachProject} />
+                  ))}
+                </ul>
+              </div>
+            </main>
+
+            <footer
+              className={`py-8 border-t text-center text-xs transition-colors duration-300 ${
+                isDark
+                  ? "bg-[#070b16] border-slate-800 text-slate-500"
+                  : "bg-slate-100 border-slate-200 text-slate-500"
+              }`}
+            >
+              <p>© {new Date().getFullYear()} Muhammed Asiyas. All rights reserved.</p>
+            </footer>
+          </div>
         );
       }}
     </ThemeContext.Consumer>

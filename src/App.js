@@ -10,8 +10,26 @@ import "./App.css";
 
 class App extends Component {
   state = {
-    isDark: false,
+    isDark: true, // Default to sleek modern dark theme
     isActiveNav: '',
+  };
+
+  componentDidMount() {
+    this.updateDocumentTheme(this.state.isDark);
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.isDark !== this.state.isDark) {
+      this.updateDocumentTheme(this.state.isDark);
+    }
+  }
+
+  updateDocumentTheme = (isDark) => {
+    if (isDark) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
   };
 
   onChangeTheme = () => {
@@ -20,13 +38,14 @@ class App extends Component {
     }));
   };
 
-  onChangeNavId = id => {
+  onChangeNavId = (id) => {
     this.setState({
-      isActiveNav: id
-    })
-  }
+      isActiveNav: id,
+    });
+  };
+
   render() {
-    const { isDark, isActiveNav} = this.state;
+    const { isDark, isActiveNav } = this.state;
     return (
       <ThemeContext.Provider
         value={{
@@ -36,13 +55,15 @@ class App extends Component {
           onClickNav: this.onChangeNavId,
         }}
       >
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/projects" component={MoreProjects} />
-          <Route exact path="/certificates" component={MoreCertificates} />
-          <Route exact path="/educations" component={Education} />
-          <Route exact path="/contacts" component={Contact} />
-        </Switch>
+        <div className={`min-h-screen transition-colors duration-300 ${isDark ? 'dark bg-[#0a0f1d] text-slate-100' : 'bg-slate-50 text-slate-800'}`}>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/projects" component={MoreProjects} />
+            <Route exact path="/certificates" component={MoreCertificates} />
+            <Route exact path="/educations" component={Education} />
+            <Route exact path="/contacts" component={Contact} />
+          </Switch>
+        </div>
       </ThemeContext.Provider>
     );
   }
