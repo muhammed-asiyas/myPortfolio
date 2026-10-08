@@ -230,7 +230,7 @@ const Home = () => (
                     {/* Action Buttons */}
                     <div className="mt-8 flex flex-wrap items-center gap-4">
                       <a
-                        href="https://drive.google.com/file/d/1sdd6HuIZ1YDTZwlZwVTreWiiX9SW23-D/view?usp=sharing"
+                        href="https://drive.google.com/file/d/1R8do1hM4lvaqRcMfgw3arRUNnxCsoLeV/view"
                         target="_blank"
                         rel="noreferrer"
                         className="inline-flex items-center gap-2 px-7 py-3.5 rounded-2xl text-base font-bold text-white bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 hover:from-indigo-500 hover:to-pink-500 shadow-lg shadow-indigo-500/25 transition-all duration-300 hover:scale-105 active:scale-95"
