@@ -55,7 +55,7 @@ class App extends Component {
           onClickNav: this.onChangeNavId,
         }}
       >
-        <div className={`min-h-screen transition-colors duration-300 ${isDark ? 'dark bg-[#0a0f1d] text-slate-100' : 'bg-slate-50 text-slate-800'}`}>
+        <div className={`min-h-screen w-full overflow-x-hidden transition-colors duration-300 ${isDark ? 'dark bg-[#0a0f1d] text-slate-100' : 'bg-slate-50 text-slate-800'}`}>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/projects" component={MoreProjects} />

@@ -83,34 +83,33 @@ const projectList = [
   },
   {
     id: 3,
-    title: "Todo Application",
+    title: "MathMind Ai",
     description:
-      "A simple and efficient Todo Application built using React that allows users to create, edit, delete, and manage daily tasks.",
+      "An AI-powered math learning application designed to help students practice and improve their problem-solving skills.",
     features: [
       {
         id: "D1",
-        feature: "Add, edit, and delete tasks",
+        feature: "User can practice math problems by selecting different topics and difficulty levels, and the application provides instant feedback on their answers."
       },
       {
         id: "D2",
-        feature: "User can filter tasks by status (All / Completed / Pending)",
+        feature: "The application uses AI algorithms to generate personalized problem sets based on the user's performance and learning pace.",
       },
       {
         id: "D3",
-        feature: "Clean and responsive UI (mobile-friendly design) and Optimized for performance and smooth UX"
+        feature: "The application tracks the user's progress and provides detailed analytics to help them identify areas for improvement."
       },
     ],
     skills: [
-      { id: "B1", skill: "HTML" },
-      { id: "B2", skill: "CSS" },
-      { id: "B3", skill: "REACT JS" },
+      { id: "B1", skill: "REACT JS" },
+      { id: "B2", skill: "AI" },
+      { id: "B3", skill: "NODEMAILER" },
       { id: "B4", skill: "JAVA SCRIPT" },
-      { id: "B5", skill: "NODE JS" },
+      { id: "B5", skill: "MONGO DB" },
       { id: "B6", skill: "EXPRESS" },
-      { id: "B7", skill: "SQLITE" },
     ],
-    projectLink: "https://todoapplicationfullstack.onrender.com/",
-    gitHub: "https://github.com/muhammed-asiyas/TodoApplicationBackend"
+    projectLink: "https://mathmind-ai-client.vercel.app/",
+    gitHub: "https://github.com/muhammed-asiyas/MathMind-Ai"
   },
 ];
 

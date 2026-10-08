@@ -5,10 +5,22 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: hidden;
   }
+
   body {
     @apply transition-colors duration-300 font-sans;
     margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: #0a0f1d;
+  }
+
+  #root {
+    width: 100%;
+    min-height: 100vh;
   }
 }
 

@@ -77,12 +77,21 @@ const projectList = [
   },
   {
     id: 2,
+    title: "MathMind Ai",
+    projectImage: "https://res.cloudinary.com/dlhgbo0ji/image/upload/v1791439621/Screenshot_2026-10-08_113529_jxf63s.png",
+    description:
+      "An AI-powered math learning application designed to help students practice and improve their problem-solving skills.",
+    projectLink: "https://mathmind-ai-client.vercel.app/",
+  },
+  {
+    id: 3,
     title: "Tasty Kitchens (Swiggy/Zomato Clone)",
     projectImage: "https://res.cloudinary.com/dlhgbo0ji/image/upload/v1767686807/Screenshot_2026-01-06_131206_yq5qb4.png",
     description:
       "Constructed an engaging Online Food Ordering Service akin to Swiggy/Zomato, enabling users to discover top restaurants, obtain in-depth restaurant details, manage their cart, and process payments.",
     projectLink: "https://asiyas-tastey-kitchens.vercel.app/",
   },
+  
 ];
 
 const certificateList = [
