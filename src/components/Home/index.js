@@ -5,7 +5,7 @@ import ThemeContext from "../../context/ThemeContext";
 import TiltCard from "../common/TiltCard";
 import { ScrollReveal, MagneticWrap, ParallaxBand, CountUp } from "../common/Animations";
 import {
-  Download, ArrowRight, Droplets, Layers, Sparkles, ExternalLink,
+  Download, ArrowRight, Layers, Sparkles, ExternalLink,
   Code2, Database, Award, Mail, Cpu
 } from "lucide-react";
 
