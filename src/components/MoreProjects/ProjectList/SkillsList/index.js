@@ -12,10 +12,10 @@ const SkillsList = (props) => {
 
         return (
           <li
-            className={`px-3 py-1.5 rounded-lg text-xs font-semibold uppercase tracking-wider border transition-colors ${
+            className={`px-3 py-1.5 rounded-xl text-xs font-bold uppercase tracking-wider border transition-colors ${
               isDark
-                ? "bg-indigo-500/10 text-indigo-300 border-indigo-500/20"
-                : "bg-indigo-50 text-indigo-700 border-indigo-200"
+                ? "bg-amber-500/10 text-amber-300 border-amber-500/25 hover:border-amber-400/50"
+                : "bg-amber-50 text-amber-900 border-amber-200 hover:border-amber-400"
             }`}
           >
             {skill}

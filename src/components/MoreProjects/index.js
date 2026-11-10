@@ -3,6 +3,7 @@ import Header from "../Header";
 import ProjectList from "./ProjectList";
 import ThemeContext from "../../context/ThemeContext";
 import { FolderGit2 } from "lucide-react";
+import { ScrollReveal, ParallaxBand } from "../common/Animations";
 
 const projectList = [
   {
@@ -85,7 +86,7 @@ const projectList = [
     id: 3,
     title: "MathMind Ai",
     description:
-      "An AI-powered math learning application designed to help students practice and improve their problem-solving skills.",
+      "An AI-powered math learning application designed to help students practice and improve their problem-solving skills with customized difficulty levels.",
     features: [
       {
         id: "D1",
@@ -123,30 +124,40 @@ const MoreProjects = () => {
           <div className="w-full flex flex-col min-h-screen">
             <Header />
 
-            <main className="flex-grow py-12 sm:py-16">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Header Title */}
-                <div className="text-center max-w-2xl mx-auto mb-14">
-                  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold mb-3 border bg-indigo-500/10 border-indigo-500/20 text-indigo-600 dark:text-indigo-400">
-                    <FolderGit2 size={15} />
-                    <span>Selected Works</span>
-                  </div>
-                  <h1 className="text-3xl sm:text-5xl font-black tracking-tight">
-                    FEATURED PROJECTS
-                  </h1>
-                  <p
-                    className={`mt-3 text-sm sm:text-base ${
-                      isDark ? "text-slate-400" : "text-slate-600"
-                    }`}
-                  >
-                    Deep dive into each project's architectural features, state management, REST API workflows, and technical stack.
-                  </p>
-                </div>
+            <main className="flex-grow py-14 sm:py-20 relative overflow-hidden">
+              {/* Kopiko Ambient Glow Wells */}
+              <ParallaxBand speed={0.09} className="absolute top-[-8%] right-[-5%] pointer-events-none opacity-60">
+                <div className="w-[600px] h-[600px] bg-amber-600/10 rounded-full blur-[140px]" />
+              </ParallaxBand>
+              <ParallaxBand speed={0.06} className="absolute bottom-[5%] left-[-8%] pointer-events-none opacity-40">
+                <div className="w-[450px] h-[450px] bg-orange-700/10 rounded-full blur-[120px]" />
+              </ParallaxBand>
 
-                {/* Projects List */}
-                <ul className="space-y-8 list-none p-0 m-0 max-w-5xl mx-auto">
-                  {projectList.map((eachProject) => (
-                    <ProjectList key={eachProject.id} projectList={eachProject} />
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                {/* ── Asymmetric Section Header ── */}
+                <ScrollReveal direction="up" className="mb-16">
+                  <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
+                    <div>
+                      <div className="text-[11px] font-mono font-black uppercase tracking-[0.2em] text-amber-500 flex items-center gap-1.5 mb-3">
+                        <FolderGit2 size={14} /> [ SELECTED WORKS ]
+                      </div>
+                      <h1 className="text-4xl sm:text-6xl font-black font-display tracking-tight leading-[1.08]">
+                        FEATURED<br />
+                        <span className="text-gradient-kopiko">PROJECTS</span>
+                      </h1>
+                    </div>
+                    <p className={`max-w-xs text-sm leading-relaxed ${isDark ? "text-[#b09683]" : "text-[#6c432b]"}`}>
+                      Deep dive into architectural features, state management, REST API workflows, and full technical stack of each project.
+                    </p>
+                  </div>
+                </ScrollReveal>
+
+                {/* Projects List — staggered scroll reveals */}
+                <ul className="space-y-10 list-none p-0 m-0 max-w-5xl mx-auto">
+                  {projectList.map((eachProject, i) => (
+                    <ScrollReveal key={eachProject.id} direction={i % 2 === 0 ? "left" : "right"} delay={i * 80}>
+                      <ProjectList projectList={eachProject} />
+                    </ScrollReveal>
                   ))}
                 </ul>
               </div>
@@ -155,8 +166,8 @@ const MoreProjects = () => {
             <footer
               className={`py-8 border-t text-center text-xs transition-colors duration-300 ${
                 isDark
-                  ? "bg-[#070b16] border-slate-800 text-slate-500"
-                  : "bg-slate-100 border-slate-200 text-slate-500"
+                  ? "bg-[#0b0402] border-amber-900/25 text-[#917561]"
+                  : "bg-[#f4ebe0] border-amber-900/10 text-[#6d4e38]"
               }`}
             >
               <p>© {new Date().getFullYear()} Muhammed Asiyas. All rights reserved.</p>

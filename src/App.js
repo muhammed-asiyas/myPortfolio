@@ -5,12 +5,13 @@ import MoreProjects from "./components/MoreProjects";
 import MoreCertificates from "./components/MoreCertificates";
 import Education from "./components/Education";
 import Contact from "./components/Contact";
+import WaterDropsBackground from "./components/WaterDropsBackground";
 import ThemeContext from "./context/ThemeContext";
 import "./App.css";
 
 class App extends Component {
   state = {
-    isDark: true, // Default to sleek modern dark theme
+    isDark: true, // Default to Kopiko dark roast theme
     isActiveNav: '',
   };
 
@@ -27,8 +28,10 @@ class App extends Component {
   updateDocumentTheme = (isDark) => {
     if (isDark) {
       document.documentElement.classList.add('dark');
+      document.body.style.backgroundColor = '#0f0806';
     } else {
       document.documentElement.classList.remove('dark');
+      document.body.style.backgroundColor = '#fbf7f0';
     }
   };
 
@@ -55,14 +58,25 @@ class App extends Component {
           onClickNav: this.onChangeNavId,
         }}
       >
-        <div className={`min-h-screen w-full overflow-x-hidden transition-colors duration-300 ${isDark ? 'dark bg-[#0a0f1d] text-slate-100' : 'bg-slate-50 text-slate-800'}`}>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/projects" component={MoreProjects} />
-            <Route exact path="/certificates" component={MoreCertificates} />
-            <Route exact path="/educations" component={Education} />
-            <Route exact path="/contacts" component={Contact} />
-          </Switch>
+        <div
+          className={`min-h-screen w-full relative overflow-x-hidden transition-colors duration-500 font-sans ${
+            isDark
+              ? 'dark bg-[#0f0806] text-[#fffaf5] selection:bg-amber-600/40 selection:text-amber-100'
+              : 'bg-[#fbf7f0] text-[#23120b] selection:bg-amber-500/30 selection:text-amber-950'
+          }`}
+        >
+          {/* Ambient interactive water droplet canvas */}
+          <WaterDropsBackground />
+
+          <div className="relative z-20 flex flex-col min-h-screen">
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/projects" component={MoreProjects} />
+              <Route exact path="/certificates" component={MoreCertificates} />
+              <Route exact path="/educations" component={Education} />
+              <Route exact path="/contacts" component={Contact} />
+            </Switch>
+          </div>
         </div>
       </ThemeContext.Provider>
     );

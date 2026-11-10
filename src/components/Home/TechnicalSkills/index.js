@@ -11,25 +11,29 @@ const TechnicalSkills = (props) => {
         const { isDark } = value;
         return (
           <li
-            className={`group relative flex flex-col items-center justify-center p-5 rounded-2xl transition-all duration-300 transform hover:-translate-y-1.5 hover:shadow-xl cursor-default ${
+            className={`group relative flex flex-col items-center justify-center p-5 rounded-3xl transition-all duration-300 transform hover:-translate-y-2 cursor-default overflow-hidden ${
               isDark
-                ? "bg-slate-900/60 hover:bg-slate-800/80 border border-slate-800/80 hover:border-indigo-500/40 hover:shadow-indigo-500/10"
-                : "bg-white/80 hover:bg-white border border-slate-200/80 hover:border-indigo-300 hover:shadow-slate-200/50"
+                ? "bg-[#180e0a]/80 hover:bg-[#23130d] border border-amber-900/30 hover:border-amber-500/50 hover:shadow-xl hover:shadow-amber-950/40"
+                : "bg-white/90 hover:bg-white border border-amber-900/10 hover:border-amber-500/40 hover:shadow-xl hover:shadow-amber-900/10"
             }`}
           >
-            <div className="w-14 h-14 flex items-center justify-center rounded-xl p-2.5 transition-transform duration-300 group-hover:scale-110">
+            {/* Water droplet specular highlight corner */}
+            <div className="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-amber-400/30 group-hover:bg-amber-400/70 transition-colors pointer-events-none" />
+
+            <div className="w-14 h-14 flex items-center justify-center rounded-2xl p-2.5 bg-amber-500/5 group-hover:bg-amber-500/10 transition-all duration-300 group-hover:scale-110">
               <img
-                className="w-full h-full object-contain filter drop-shadow-sm"
+                className="w-full h-full object-contain filter drop-shadow-sm transition-transform duration-300 group-hover:rotate-3"
                 src={icon}
                 alt={name}
                 loading="lazy"
               />
             </div>
+
             <p
-              className={`mt-3 text-sm font-semibold tracking-wide transition-colors duration-200 ${
+              className={`mt-3.5 text-sm font-bold tracking-tight transition-colors duration-200 ${
                 isDark
-                  ? "text-slate-200 group-hover:text-indigo-400"
-                  : "text-slate-700 group-hover:text-indigo-600"
+                  ? "text-[#e8d5c4] group-hover:text-amber-400"
+                  : "text-[#3f2012] group-hover:text-amber-700"
               }`}
             >
               {name}

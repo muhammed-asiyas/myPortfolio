@@ -15,24 +15,24 @@ const ProjectList = (props) => {
 
         return (
           <li
-            className={`p-6 sm:p-8 rounded-3xl border transition-all duration-300 flex flex-col hover:-translate-y-1 hover:shadow-2xl ${
+            className={`p-6 sm:p-9 rounded-3xl border transition-all duration-300 flex flex-col hover:-translate-y-1.5 hover:shadow-2xl ${
               isDark
-                ? "bg-slate-900/70 border-slate-800/90 hover:border-indigo-500/40 hover:shadow-indigo-500/10"
-                : "bg-white border-slate-200/90 hover:border-indigo-300 hover:shadow-xl hover:shadow-slate-200/60"
+                ? "bg-[#180e0a]/80 border-amber-900/35 hover:border-amber-500/50 hover:shadow-amber-950/50"
+                : "bg-white/95 border-amber-900/10 hover:border-amber-500/40 hover:shadow-xl hover:shadow-amber-900/10"
             }`}
           >
             {/* Title & Description */}
             <div className="mb-6">
               <h2
-                className={`text-2xl sm:text-3xl font-extrabold tracking-tight mb-3 transition-colors ${
-                  isDark ? "text-white" : "text-slate-900"
+                className={`text-2xl sm:text-3xl font-extrabold font-display tracking-tight mb-3 transition-colors ${
+                  isDark ? "text-[#fffaf5]" : "text-[#241209]"
                 }`}
               >
                 {title}
               </h2>
               <p
                 className={`text-sm sm:text-base leading-relaxed ${
-                  isDark ? "text-slate-300" : "text-slate-600"
+                  isDark ? "text-[#cfb9a7]" : "text-[#5c3722]"
                 }`}
               >
                 {description}
@@ -40,12 +40,12 @@ const ProjectList = (props) => {
             </div>
 
             {/* Key Features */}
-            <div className="mb-6">
-              <div className="flex items-center gap-2 mb-3">
-                <Sparkles size={16} className="text-indigo-500" />
+            <div className="mb-7">
+              <div className="flex items-center gap-2 mb-3.5">
+                <Sparkles size={16} className="text-amber-500" />
                 <h3
-                  className={`text-sm font-bold uppercase tracking-wider ${
-                    isDark ? "text-slate-200" : "text-slate-800"
+                  className={`text-xs sm:text-sm font-bold uppercase tracking-wider ${
+                    isDark ? "text-[#e8d5c4]" : "text-[#3f2012]"
                   }`}
                 >
                   Key Architectural Features
@@ -60,11 +60,11 @@ const ProjectList = (props) => {
 
             {/* Technologies Used */}
             <div className="mb-8">
-              <div className="flex items-center gap-2 mb-3">
-                <Layers size={16} className="text-purple-500" />
+              <div className="flex items-center gap-2 mb-3.5">
+                <Layers size={16} className="text-orange-500" />
                 <h3
-                  className={`text-sm font-bold uppercase tracking-wider ${
-                    isDark ? "text-slate-200" : "text-slate-800"
+                  className={`text-xs sm:text-sm font-bold uppercase tracking-wider ${
+                    isDark ? "text-[#e8d5c4]" : "text-[#3f2012]"
                   }`}
                 >
                   Technologies Used
@@ -78,13 +78,13 @@ const ProjectList = (props) => {
             </div>
 
             {/* Buttons / Actions */}
-            <div className="mt-auto pt-6 border-t border-slate-200/60 dark:border-slate-800 flex flex-wrap items-center gap-4">
+            <div className="mt-auto pt-6 border-t border-amber-900/20 dark:border-amber-900/35 flex flex-wrap items-center gap-4">
               {projectLink && (
                 <a
                   href={projectLink}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 shadow-md shadow-indigo-500/20 transition-all duration-200 hover:scale-105 active:scale-95"
+                  className="water-sheen-btn inline-flex items-center gap-2 px-6 py-3 rounded-2xl text-sm font-bold text-white bg-gradient-to-r from-amber-600 via-orange-600 to-amber-700 hover:from-amber-500 hover:to-orange-500 shadow-lg shadow-amber-900/30 transition-all duration-200 hover:scale-105 active:scale-95"
                 >
                   <ExternalLink size={16} />
                   Live Preview
@@ -96,10 +96,10 @@ const ProjectList = (props) => {
                   href={gitHub}
                   target="_blank"
                   rel="noreferrer"
-                  className={`inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold border transition-all duration-200 hover:scale-105 active:scale-95 ${
+                  className={`water-sheen-btn inline-flex items-center gap-2 px-6 py-3 rounded-2xl text-sm font-bold border transition-all duration-200 hover:scale-105 active:scale-95 ${
                     isDark
-                      ? "bg-slate-800/80 hover:bg-slate-700/80 border-slate-700 text-white"
-                      : "bg-slate-100 hover:bg-slate-200 border-slate-300 text-slate-800"
+                      ? "bg-[#1f110c] hover:bg-[#2c1710] border-amber-900/40 text-amber-100"
+                      : "bg-amber-50 hover:bg-amber-100 border-amber-300/80 text-amber-950"
                   }`}
                 >
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">

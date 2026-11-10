@@ -14,10 +14,10 @@ const FeatureList = (props) => {
         return (
           <li className="flex items-start gap-3 text-sm leading-relaxed">
             <CheckCircle2
-              size={18}
-              className="text-emerald-500 mt-0.5 flex-shrink-0"
+              size={17}
+              className="text-amber-500 mt-1 flex-shrink-0"
             />
-            <span className={isDark ? "text-slate-300" : "text-slate-700"}>
+            <span className={isDark ? "text-[#cfb9a7]" : "text-[#5c3722]"}>
               {feature}
             </span>
           </li>

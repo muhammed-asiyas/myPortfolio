@@ -3,6 +3,7 @@ import Header from "../Header";
 import CertificateItem from "./CertificateItem";
 import ThemeContext from "../../context/ThemeContext";
 import { Award, CheckCircle2 } from "lucide-react";
+import { ScrollReveal, ParallaxBand } from "../common/Animations";
 
 const certificateList = [
   {
@@ -77,90 +78,92 @@ const MoreCertificates = () => {
           <div className="w-full flex flex-col min-h-screen">
             <Header />
 
-            <main className="flex-grow py-12 sm:py-16">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Header Title */}
-                <div className="text-center max-w-2xl mx-auto mb-14">
-                  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold mb-3 border bg-indigo-500/10 border-indigo-500/20 text-indigo-600 dark:text-indigo-400">
-                    <Award size={15} />
-                    <span>Official Accreditations</span>
-                  </div>
-                  <h1 className="text-3xl sm:text-5xl font-black tracking-tight">
-                    CERTIFICATIONS
-                  </h1>
-                  <p
-                    className={`mt-3 text-sm sm:text-base ${
-                      isDark ? "text-slate-400" : "text-slate-600"
-                    }`}
-                  >
-                    Verified certifications in modern web architectures, frontend UI libraries, backend API engineering, and database systems.
-                  </p>
-                </div>
+            <main className="flex-grow py-14 sm:py-20 relative overflow-hidden">
+              {/* Kopiko Ambient Glow Wells */}
+              <ParallaxBand speed={0.1} className="absolute top-[-6%] left-1/2 -translate-x-1/2 pointer-events-none opacity-50">
+                <div className="w-[700px] h-[400px] bg-amber-600/12 rounded-full blur-[150px]" />
+              </ParallaxBand>
+              <ParallaxBand speed={0.06} className="absolute bottom-[10%] right-[-5%] pointer-events-none opacity-35">
+                <div className="w-[400px] h-[400px] bg-orange-600/10 rounded-full blur-[110px]" />
+              </ParallaxBand>
 
-                {/* Primary IRC Certificate Card */}
-                <div
-                  className={`p-6 sm:p-8 rounded-3xl border mb-16 backdrop-blur-md transition-all duration-300 ${
-                    isDark
-                      ? "bg-slate-900/60 border-slate-800 shadow-2xl shadow-indigo-950/20"
-                      : "bg-white border-slate-200 shadow-xl"
-                  }`}
-                >
-                  <div className="flex flex-col lg:flex-row items-center gap-8">
-                    <div className="w-full lg:w-3/5 rounded-2xl overflow-hidden border border-slate-700/50 shadow-lg group">
-                      <img
-                        className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
-                        src="https://res.cloudinary.com/dlhgbo0ji/image/upload/v1765175946/Screenshot_2025-12-08_113625_l1ujln.png"
-                        alt="Industry Ready Certification"
-                      />
-                    </div>
-                    <div className="w-full lg:w-2/5 flex flex-col items-start">
-                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold text-emerald-500 bg-emerald-500/10 border border-emerald-500/20 mb-3">
-                        <CheckCircle2 size={14} /> Full Stack Certified
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                {/* ── Asymmetric Section Header ── */}
+                <ScrollReveal direction="up" className="mb-16">
+                  <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
+                    <div>
+                      <div className="text-[11px] font-mono font-black uppercase tracking-[0.2em] text-amber-500 flex items-center gap-1.5 mb-3">
+                        <Award size={14} /> [ OFFICIAL ACCREDITATIONS ]
                       </div>
-                      <h2
-                        className={`text-2xl sm:text-3xl font-extrabold tracking-tight mb-3 ${
-                          isDark ? "text-white" : "text-slate-900"
-                        }`}
-                      >
-                        IRC CERTIFICATE
-                      </h2>
-                      <p
-                        className={`text-sm leading-relaxed mb-6 ${
-                          isDark ? "text-slate-300" : "text-slate-600"
-                        }`}
-                      >
-                        Comprehensive Industry Ready Certification from NxtWave Disruptive Technologies validating hands-on mastery in building scalable web apps with React, Node.js, Express, and databases.
-                      </p>
+                      <h1 className="text-4xl sm:text-6xl font-black font-display tracking-tight leading-[1.08]">
+                        CERTIFI
+                        <span className="text-gradient-kopiko">CATIONS</span>
+                      </h1>
+                    </div>
+                    <p className={`max-w-xs text-sm leading-relaxed ${isDark ? "text-[#b09683]" : "text-[#6c432b]"}`}>
+                      Verified certifications in modern web architectures, frontend UI libraries, backend API engineering, and database systems.
+                    </p>
+                  </div>
+                </ScrollReveal>
+
+                {/* ── IRC Hero Certificate ── */}
+                <ScrollReveal direction="up" delay={100} className="mb-16">
+                  <div className={`p-6 sm:p-10 rounded-3xl border backdrop-blur-md transition-all duration-300 hover:shadow-2xl ${
+                    isDark
+                      ? "bg-[#180e0a]/85 border-amber-900/40 shadow-2xl shadow-black/60 hover:border-amber-500/40"
+                      : "bg-white/95 border-amber-900/15 shadow-xl shadow-amber-900/10 hover:border-amber-500/30"
+                  }`}>
+                    <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+                      <div className="w-full lg:w-3/5 rounded-2xl overflow-hidden border border-amber-900/30 shadow-lg group">
+                        <img
+                          className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+                          src="https://res.cloudinary.com/dlhgbo0ji/image/upload/v1765175946/Screenshot_2025-12-08_113625_l1ujln.png"
+                          alt="Industry Ready Certification"
+                        />
+                      </div>
+                      <div className="w-full lg:w-2/5 flex flex-col items-start">
+                        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold text-amber-500 bg-amber-500/10 border border-amber-500/25 mb-4">
+                          <CheckCircle2 size={14} /> Full Stack Certified
+                        </div>
+                        <h2 className={`text-2xl sm:text-3xl font-extrabold font-display tracking-tight mb-3 ${
+                          isDark ? "text-[#fffaf5]" : "text-[#241209]"
+                        }`}>
+                          IRC CERTIFICATE
+                        </h2>
+                        <p className={`text-sm sm:text-base leading-relaxed mb-6 ${
+                          isDark ? "text-[#cfb9a7]" : "text-[#5c3722]"
+                        }`}>
+                          Comprehensive Industry Ready Certification from NxtWave Disruptive Technologies validating hands-on mastery in building scalable web apps with React, Node.js, Express, and databases.
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </ScrollReveal>
 
-                {/* Other Certificates Section */}
-                <div>
-                  <h2
-                    className={`text-2xl font-bold tracking-tight mb-6 flex items-center gap-2 ${
-                      isDark ? "text-white" : "text-slate-900"
-                    }`}
-                  >
-                    All Verified Modules & Foundations
+                {/* ── All Verified Modules ── */}
+                <ScrollReveal direction="up" delay={60} className="mb-8">
+                  <h2 className={`text-2xl font-bold font-display tracking-tight flex items-center gap-2 ${
+                    isDark ? "text-[#fffaf5]" : "text-[#241209]"
+                  }`}>
+                    All Verified Modules &amp; Foundations
                   </h2>
-                  <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 list-none p-0 m-0">
-                    {certificateList.map((eachCertificate) => (
-                      <CertificateItem
-                        key={eachCertificate.id}
-                        certificateItem={eachCertificate}
-                      />
-                    ))}
-                  </ul>
-                </div>
+                </ScrollReveal>
+
+                <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 list-none p-0 m-0">
+                  {certificateList.map((eachCertificate, i) => (
+                    <ScrollReveal key={eachCertificate.id} direction="up" delay={i * 60}>
+                      <CertificateItem certificateItem={eachCertificate} />
+                    </ScrollReveal>
+                  ))}
+                </ul>
               </div>
             </main>
 
             <footer
               className={`py-8 border-t text-center text-xs transition-colors duration-300 ${
                 isDark
-                  ? "bg-[#070b16] border-slate-800 text-slate-500"
-                  : "bg-slate-100 border-slate-200 text-slate-500"
+                  ? "bg-[#0b0402] border-amber-900/25 text-[#917561]"
+                  : "bg-[#f4ebe0] border-amber-900/10 text-[#6d4e38]"
               }`}
             >
               <p>© {new Date().getFullYear()} Muhammed Asiyas. All rights reserved.</p>

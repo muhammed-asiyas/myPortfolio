@@ -15,27 +15,32 @@ const ContactItems = (props) => {
             href={link}
             target="_blank"
             rel="noreferrer"
-            className={`group flex flex-col items-center text-center p-6 rounded-2xl border transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl ${
+            className={`group relative flex flex-col items-center text-center p-6 rounded-3xl border transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl overflow-hidden ${
               isDark
-                ? "bg-slate-900/60 border-slate-800 hover:border-indigo-500/40 hover:shadow-indigo-500/10 hover:bg-slate-800/80"
-                : "bg-white/80 border-slate-200/80 hover:border-indigo-300 hover:shadow-slate-200/50 hover:bg-white"
+                ? "bg-[#180e0a]/80 border-amber-900/30 hover:border-amber-500/50 hover:bg-[#23130d] hover:shadow-amber-950/50"
+                : "bg-white/95 border-amber-900/10 hover:border-amber-500/40 hover:bg-white hover:shadow-amber-900/10"
             }`}
           >
-            <div className="w-14 h-14 rounded-2xl flex items-center justify-center p-3 mb-4 bg-indigo-500/10 group-hover:scale-110 transition-transform duration-300">
+            {/* Water droplet shine accent */}
+            <div className="absolute top-3 right-3 w-2.5 h-2.5 rounded-full bg-amber-400/30 group-hover:bg-amber-400/80 transition-all pointer-events-none" />
+
+            <div className="w-16 h-16 rounded-2xl flex items-center justify-center p-3.5 mb-4 bg-gradient-to-br from-amber-600/15 via-orange-600/15 to-transparent border border-amber-500/20 group-hover:scale-110 group-hover:border-amber-500/40 transition-all duration-300 shadow-inner">
               <img className="w-full h-full object-contain filter drop-shadow" src={logo} alt={title} />
             </div>
+
             <h4
-              className={`text-base font-bold tracking-tight mb-1 ${
-                isDark ? "text-white" : "text-slate-900"
+              className={`text-base font-bold tracking-tight mb-1.5 ${
+                isDark ? "text-[#fffaf5]" : "text-[#241209]"
               }`}
             >
               {title}
             </h4>
+
             <p
               className={`text-sm break-all font-medium transition-colors ${
                 isDark
-                  ? "text-slate-400 group-hover:text-indigo-400"
-                  : "text-slate-600 group-hover:text-indigo-600"
+                  ? "text-[#cfb9a7] group-hover:text-amber-400"
+                  : "text-[#5c3722] group-hover:text-amber-700"
               }`}
             >
               {displayText}
