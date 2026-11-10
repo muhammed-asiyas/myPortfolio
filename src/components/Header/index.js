@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link, withRouter } from "react-router-dom";
 import ThemeContext from "../../context/ThemeContext";
 import { Sun, Moon, Menu, X, Coffee } from "lucide-react";
@@ -13,7 +13,26 @@ const navItemList = [
 
 const Header = (props) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const lastScrollY = useRef(0);
   const currentPath = props.location?.pathname || "/";
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY <= 80 || currentScrollY < lastScrollY.current) {
+        setIsVisible(true);
+      } else if (currentScrollY > lastScrollY.current) {
+        setIsVisible(false);
+      }
+
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <ThemeContext.Consumer>
@@ -21,8 +40,13 @@ const Header = (props) => {
         const { isDark, toggleTheme } = value;
 
         return (
+          <>
           <header
-            className={`sticky top-0 z-50 w-full backdrop-blur-xl transition-all duration-300 ${
+            className={`fixed left-0 top-0 z-50 w-full backdrop-blur-xl transition-all duration-300 ${
+              isVisible
+                ? "translate-y-0 opacity-100"
+                : "-translate-y-full opacity-0 pointer-events-none"
+            } ${
               isDark
                 ? "bg-[#140a07]/80 border-b border-amber-900/30 text-[#fffaf5]"
                 : "bg-[#fcf6ee]/85 border-b border-amber-800/10 text-[#2b150c]"
@@ -155,6 +179,8 @@ const Header = (props) => {
               </div>
             )}
           </header>
+          <div className="h-16 w-full sm:h-20" aria-hidden="true" />
+          </>
         );
       }}
     </ThemeContext.Consumer>
