@@ -188,7 +188,7 @@ const Home = () => (
                             Muhammed Asiyas
                           </p>
                           <p className="mt-1 text-sm sm:text-base font-semibold leading-snug text-amber-500">
-                            Full Stack Architect
+                            Mern Stack Developer
                           </p>
                         </div>
                       </TiltCard>
